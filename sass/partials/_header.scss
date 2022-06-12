@@ -1,0 +1,46 @@
+/*---HEADER---*/
+
+.header {
+    width: 90%;
+    margin: $spacing-base auto;
+    display: grid;
+    grid-gap: $spacing-base;
+    grid-template-columns: (1fr);
+    grid-template-rows: (1fr);
+    grid-template-areas: 'header';
+    padding: $spacing-xsmall;
+	background: url(../Img/Header-fondo-2.png);
+    background-color: $alternative2;
+    background-repeat: no-repeat;
+	box-shadow: 0px 0px 70px $box-shadow;
+}
+
+.logo img{
+    width: 380px;
+}
+
+.menu {
+    border-top: 1px solid $primary;
+	border-bottom: 1px solid $primary;
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & a {
+        padding: $spacing-xxsmall;
+        color: $primary;
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 400;
+        width: 100%;
+        text-align: center;
+        transition: 0.2s ease all;
+        font-size: $text-small;
+    
+        &:hover {
+        background: $hover-background;
+        color: $alternative2;
+        }
+    }
+}

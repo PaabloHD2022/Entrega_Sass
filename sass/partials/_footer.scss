@@ -1,0 +1,62 @@
+/*---FOOTER---*/
+
+footer{
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: $spacing-base;
+    grid-template-columns: (1fr);
+    grid-template-rows: (1fr);
+    grid-template-areas: 'footer';
+    padding: $spacing-base;
+    background-image: $background-gradient;
+	box-shadow: 0px 0px 70px $box-shadow;
+}
+
+.footer__nav{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: $spacing-small;
+}
+
+.footer__menu li{
+    list-style: none;
+
+    & a{
+        text-decoration: none;
+        color: $alternative2;
+        font-size: $text-small;
+    
+        &:hover{
+            color: $primary;
+        }
+    }
+}
+
+.redes_sociales img{
+    margin: $spacing-xsmall;
+}
+
+.formulario2{
+    width: 50%;
+    padding: $spacing-small;
+    margin: $spacing-xsmall;
+    text-align: justify;
+    font-size: $text-base;
+}
+
+.email{
+    font-size: $text-small;
+    text-decoration-line: none;
+}
+
+.phone{
+    color: $alternative2;
+    font-size: $text-small;
+}
+
+.copyright{
+    font-size: $text-small;
+}

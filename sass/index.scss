@@ -1,0 +1,23 @@
+/* Fonts externos */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;400&family=Sora:wght@100;500&display=swap');
+
+/* Misc */
+
+@import './misc/variables';
+@import './misc/normalize';
+@import './misc/responsive';
+
+/* Partials */
+
+@import './partials/footer';
+@import './partials/header';
+
+/* Views */
+
+@import './views/home';
+@import './views/nosotros';
+@import './views/servicios';
+@import './views/portfolio';
+@import './views/contacto';

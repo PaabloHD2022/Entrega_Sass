@@ -1,0 +1,38 @@
+/*---NOSOTROS---*/
+
+.seccion__nosotros{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: $spacing-large;
+}
+
+.quienes_somos{
+    width: 600px;
+    font-family: $font-secondary;
+    margin-top: $spacing-medium;
+    margin-left: $spacing-base;
+}
+
+.titulo_nosotros h3{
+    width: 600px;
+    font-size: $text-base;
+    margin-top: $spacing-large;
+}
+
+.informacion{
+    font-size: $text-base;
+    margin-top: $spacing-base;
+    text-align: justify;
+}
+
+.imagen__nosotros{
+    margin: $spacing-base;
+}
+
+.imagen__nosotros img{
+    width: 600px;
+    border-radius: $radius-large;
+    margin: $spacing-base;
+}

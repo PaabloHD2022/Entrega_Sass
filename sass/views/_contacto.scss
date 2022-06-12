@@ -1,0 +1,89 @@
+/*---CONTACTO---*/
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.form-header h3{
+    color: $titulo-h3-color;
+    font-weight: bolder;
+}
+
+.ayuda{
+    font-size: $text-small;
+    width: 50%;
+    margin-left: $spacing-base;
+    margin-top: $spacing-base;
+    text-align: justify;
+    font-family: $font-secondary;
+
+    & h3{
+        font-weight: bolder;
+    }
+
+    &p{
+        font-weight: bolder;
+    }
+}
+
+.contenedor .form{
+    background: $background-color;
+    width: 100%;
+    margin: $spacing-large;
+    padding: $spacing-xxsmall $spacing-medium;
+    margin: $spacing-medium;
+    padding-bottom: $spacing-medium;
+    border-radius: $radius-small;
+
+    & .form-header .form-title{
+        font-weight: normal;
+        color: $background-color;
+        text-align: center;
+        padding: $spacing-xsmall;
+    }
+
+    & .form-label{
+        display: flex;
+        color: $text-color-2;
+        font-size: $text-small;
+        font-family: $font-secondary;
+    }
+
+    & .form-input, .form-textarea {
+        background: $alternative2;
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: $spacing-xsmall;
+        margin-bottom: $spacing-xsmall;
+        border-radius: $radius-small;
+    }
+
+    & .form-textarea{
+        resize: vertical;
+        max-height: $spacing-xlarge;
+        min-height: $spacing-large;
+        font-family: $font-secondary;
+    }
+
+    & .btn-submit{
+        width: 100%;
+        background: $background-color;
+        font-size: $text-small;
+        border: none;
+        color: $alternative2;
+        padding: $spacing-small 0px;
+        cursor: pointer;
+        transition: all .5s;
+        border-radius: $radius-small;
+        
+        &:hover{
+            background: $secondary;
+        }    
+    }    
+}
+
