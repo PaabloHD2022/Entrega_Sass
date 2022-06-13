@@ -36,11 +36,40 @@
         width: 100%;
         text-align: center;
         transition: 0.2s ease all;
-        font-size: $text-small;
+        font-size: $text-xsmall;
     
         &:hover {
         background: $hover-background;
         color: $alternative2;
         }
     }
+}
+
+//RESPONSIVE
+
+@media (max-width: 768px){
+    .header {
+        width: 90%;
+        margin: $spacing-base auto;
+        display: grid;
+        grid-gap: $spacing-base;
+        grid-template-columns: (1fr);
+        grid-template-rows: (1fr);
+        grid-template-areas: 'header';
+        background: url(../Img/Header-fondo-3.png);
+        background-repeat: no-repeat;
+        padding: $spacing-base;
+        text-align: center;
+    }
+
+    .logo img{
+        width: 280px;
+        
+    }
+
+}
+
+@media (max-width: 576px){
+
+
 }

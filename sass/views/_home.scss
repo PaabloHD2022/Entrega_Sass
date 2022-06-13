@@ -72,3 +72,46 @@
     color: $primary;
     font-weight: bold;
 }
+
+//RESPONSIVE
+
+@media (max-width: 992px) {
+    .articulos2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: $spacing-small;
+    }
+    
+    .articulos2>p{
+        font-size: $text-base;
+        text-align: center;
+        color: $background-color;
+        width: 70%;
+        margin: $spacing-medium 0px $spacing-medium 0px;
+    }
+    
+    .pilares {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:90%;
+        background: none;
+        
+    }
+    
+    .pilares img{
+        width: 150px;
+        padding: $spacing-base;
+    }
+    
+    .pilares p{
+        font-size: $text-base;
+        padding: $spacing-xsmall;
+        font-weight: bold;
+        text-align: center;
+    }
+}

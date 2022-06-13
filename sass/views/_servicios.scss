@@ -91,3 +91,21 @@
     grid-column: 3 / 4;
     grid-row: 2;
 }
+
+/*---RESPONSIVE---*/
+
+@media (max-width: 1200px) {
+    .servicios{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .container__servicios{
+        width: 100%;
+        display: none;
+    }
+}

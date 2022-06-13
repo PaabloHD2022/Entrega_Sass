@@ -87,3 +87,20 @@
     }    
 }
 
+//REPONSIVE
+
+@media (max-width: 576px) {
+    .ayuda{
+        font-size: $text-base;
+        width: 100%;
+        margin-top: $spacing-xsmall;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 90%;
+    }           
+}
