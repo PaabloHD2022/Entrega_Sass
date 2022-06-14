@@ -1,4 +1,4 @@
-/*---SERVICIOS---*/
+//SERVICIOS
 
 .servicios{
     width: 100%;
@@ -39,7 +39,7 @@
     flex-direction: column;
     padding: $spacing-base;
     margin: $spacing-base;
-    align-items:center;
+    align-items: center;
 }
 
 .servicios h3{
@@ -92,20 +92,30 @@
     grid-row: 2;
 }
 
-/*---RESPONSIVE---*/
+//RESPONSIVE
 
 @media (max-width: 1200px) {
     .servicios{
-        width: 100%;
+        width: 80%;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
+
+    .container__servicios{
+        display: none;
+    }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 992px) { 
+    .servicios{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
     .container__servicios{
-        width: 100%;
         display: none;
     }
 }

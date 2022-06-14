@@ -125,8 +125,8 @@ footer {
   grid-template-areas: 'header';
   padding: 1rem;
   background: url(../Img/Header-fondo-2.png);
-  background-color: #fff;
   background-repeat: no-repeat;
+  background-color: #fff;
   box-shadow: 0px 0px 70px rgba(63, 63, 63, 0.61); }
 
 .logo img {
@@ -164,6 +164,7 @@ footer {
     grid-template-areas: 'header';
     background: url(../Img/Header-fondo-3.png);
     background-repeat: no-repeat;
+    background-color: #fff;
     padding: 2rem;
     text-align: center; }
   .logo img {
@@ -261,7 +262,6 @@ footer {
     font-weight: bold;
     text-align: center; } }
 
-/*---NOSOTROS---*/
 .seccion__nosotros {
   display: flex;
   flex-direction: row;
@@ -293,40 +293,58 @@ footer {
   border-radius: 2rem;
   margin: 2rem; }
 
-/*---RESPONSIVE---*/
+@media (max-width: 1450px) {
+  .seccion__nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-content: center; }
+  .quienes_somos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; } }
+
 @media (max-width: 1200px) {
   .seccion__nosotros {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     text-align: center;
-    margin-top: 2rem; } }
+    margin-top: 2rem; }
+  .titulo_nosotros h3 {
+    width: 600px;
+    font-size: 1.8em;
+    text-align: center; }
+  .informacion {
+    font-size: 1.8em;
+    margin-top: 2rem;
+    text-align: justify; } }
 
 @media (max-width: 768px) {
   .quienes_somos {
-    width: 500px;
+    width: 400px;
     font-family: "Barlow", sans-serif;
     margin-top: 2rem;
     margin-left: 2rem; }
   .titulo_nosotros h3 {
-    width: 500px;
+    width: 400px;
     font-size: 1.8em;
     margin-top: 5rem; }
   .informacion {
-    width: 500px;
+    width: 400px;
     font-size: 1.6em;
     margin-top: 1.5rem;
     text-align: justify; }
   .imagen__nosotros img {
-    width: 500px;
-    border-radius: 2rem; } }
+    width: 400px;
+    text-align: center; } }
 
 @media (max-width: 576px) {
   .quienes_somos {
     width: 400px;
     font-family: "Barlow", sans-serif;
-    margin-top: 2rem;
-    margin-left: 2rem; }
+    margin-top: 2rem; }
   .titulo_nosotros h3 {
     width: 400px;
     font-size: 1.8em;
@@ -338,9 +356,8 @@ footer {
     text-align: justify; }
   .imagen__nosotros img {
     width: 400px;
-    border-radius: 2rem; } }
+    text-align: center; } }
 
-/*---SERVICIOS---*/
 .servicios {
   width: 100%;
   display: flex;
@@ -418,20 +435,29 @@ footer {
   grid-column: 3 / 4;
   grid-row: 2; }
 
-/*---RESPONSIVE---*/
 @media (max-width: 1200px) {
   .servicios {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center; } }
-
-@media (max-width: 992px) {
+    justify-content: center; }
   .container__servicios {
-    width: 100%;
     display: none; } }
 
-/*---CONTACTO---*/
+@media (max-width: 992px) {
+  .servicios {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .container__servicios {
+    display: none; } }
+
+.card-text {
+  text-align: justify;
+  padding: 2rem;
+  font-family: "Barlow", sans-serif; }
+
 .contact-form {
   display: flex;
   flex-wrap: wrap;
@@ -445,9 +471,8 @@ footer {
 
 .ayuda {
   font-size: 1.6em;
-  width: 50%;
-  margin-left: 2rem;
-  margin-top: 2rem;
+  width: 40%;
+  margin-top: 5rem;
   text-align: justify;
   font-family: "Barlow", sans-serif; }
   .ayuda h3 {
@@ -471,7 +496,7 @@ footer {
   .contenedor .form .form-label {
     display: flex;
     color: #fff;
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-family: "Barlow", sans-serif; }
   .contenedor .form .form-input, .contenedor .form .form-textarea {
     background: #fff;
@@ -480,12 +505,14 @@ footer {
     width: 100%;
     padding: 1rem;
     margin-bottom: 1rem;
-    border-radius: 1rem; }
+    border-radius: 1rem;
+    font-size: 1.4em; }
   .contenedor .form .form-textarea {
     resize: vertical;
     max-height: 15rem;
     min-height: 5rem;
-    font-family: "Barlow", sans-serif; }
+    font-family: "Barlow", sans-serif;
+    font-size: 1.6em; }
   .contenedor .form .btn-submit {
     width: 100%;
     background: #8f8e8e;

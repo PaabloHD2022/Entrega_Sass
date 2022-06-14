@@ -1,4 +1,4 @@
-/*---CONTACTO---*/
+//CONTACTO
 
 .contact-form {
     display: flex;
@@ -15,9 +15,8 @@
 
 .ayuda{
     font-size: $text-small;
-    width: 50%;
-    margin-left: $spacing-base;
-    margin-top: $spacing-base;
+    width: 40%;
+    margin-top: $spacing-large;
     text-align: justify;
     font-family: $font-secondary;
 
@@ -49,7 +48,7 @@
     & .form-label{
         display: flex;
         color: $text-color-2;
-        font-size: $text-small;
+        font-size: $text-base;
         font-family: $font-secondary;
     }
 
@@ -61,6 +60,7 @@
         padding: $spacing-xsmall;
         margin-bottom: $spacing-xsmall;
         border-radius: $radius-small;
+        font-size: $text-xsmall;
     }
 
     & .form-textarea{
@@ -68,6 +68,7 @@
         max-height: $spacing-xlarge;
         min-height: $spacing-large;
         font-family: $font-secondary;
+        font-size: $text-small;
     }
 
     & .btn-submit{

@@ -10,8 +10,8 @@
     grid-template-areas: 'header';
     padding: $spacing-xsmall;
 	background: url(../Img/Header-fondo-2.png);
-    background-color: $alternative2;
     background-repeat: no-repeat;
+    background-color: $alternative2;
 	box-shadow: 0px 0px 70px $box-shadow;
 }
 
@@ -58,15 +58,14 @@
         grid-template-areas: 'header';
         background: url(../Img/Header-fondo-3.png);
         background-repeat: no-repeat;
+        background-color: $alternative2;
         padding: $spacing-base;
         text-align: center;
     }
 
     .logo img{
         width: 280px;
-        
     }
-
 }
 
 @media (max-width: 576px){
