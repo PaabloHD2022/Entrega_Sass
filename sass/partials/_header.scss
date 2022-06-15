@@ -17,10 +17,11 @@
 }
 
 .logo img{
-    width: 380px;
+    width: 350px;
 }
 
 .menu {
+    margin-top: $spacing-xsmall;
     border-top: 1px solid $primary;
 	border-bottom: 1px solid $primary;
 	display: flex;
@@ -64,13 +65,69 @@
     }
 
     .logo img{
-        width: 280px;
+        width: 250px;
         
     }
 
 }
 
 @media (max-width: 576px){
+    .menu {
+        margin-top: $spacing-xsmall;
+        border-top: 1px solid $primary;
+        border-bottom: 1px solid $primary;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        & a {
+            padding: $spacing-xxsmall;
+            color: $primary;
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 400;
+            width: 100%;
+            text-align: center;
+            transition: 0.2s ease all;
+            font-size: $text-xxsmall;
+        }
+    }
+
+}
+
+@media (max-width: 320px){
+    .menu {
+        margin-top: $spacing-xsmall;
+        border-top: 1px solid $primary;
+        border-bottom: 1px solid $primary;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        & a {
+            padding: $spacing-xxsmall;
+            color: $primary;
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 400;
+            width: 100%;
+            text-align: center;
+            transition: 0.2s ease all;
+            font-size: $text-xxsmall;
+        }
+
+        .logo img{
+            width: 200px;
+            
+        }
+
+    }
+
+
+
+
 
 
 }

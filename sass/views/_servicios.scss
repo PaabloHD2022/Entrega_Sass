@@ -98,7 +98,7 @@
 
 @media (max-width: 1200px) {
     .servicios{
-        width: 100%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -110,4 +110,33 @@
         width: 100%;
         display: none;
     }
+}
+
+@media (max-width: 768px){
+
+
+
+
+}
+
+@media (max-width: 320px){
+    .servicios{
+        width: 100%;
+        max-width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    
+    
+        & p{
+            font-size: $text-xsmall;
+            font-family: $font-secondary;
+            text-align: justify;
+            margin-top: $spacing-small;
+            line-height: $line-height-small;
+        }
+    }
+
+
+
 }
