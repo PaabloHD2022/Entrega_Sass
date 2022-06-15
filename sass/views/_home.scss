@@ -2,6 +2,7 @@
 
 .principal {
     width: 90%;
+    max-width: 1200px;    
     margin: $spacing-base auto;
     display: grid;
     grid-gap: $spacing-base;
@@ -36,6 +37,7 @@
         color: $background-color;
         width: 70%;
         margin: $spacing-medium 0px $spacing-medium 0px;
+        font-family: $font-secondary;
     }
 }
 .pilares {

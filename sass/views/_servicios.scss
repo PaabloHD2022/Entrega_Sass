@@ -2,6 +2,7 @@
 
 .servicios{
     width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -12,11 +13,12 @@
         font-family: $font-secondary;
         text-align: justify;
         margin-top: $spacing-small;
+        line-height: $line-height-small;
     }
 }
 
 .servicios_offset{
-    width: 400px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     padding: $spacing-base;
@@ -25,7 +27,7 @@
 }
 
 .servicios_digital{
-    width: 400px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     padding: $spacing-base;
@@ -34,7 +36,7 @@
 }
 
 .servicios_com_visual{
-    width: 400px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     padding: $spacing-base;
@@ -43,7 +45,7 @@
 }
 
 .servicios h3{
-    width: 380px;
+    width: 300px;
     text-align: center;
 }
 

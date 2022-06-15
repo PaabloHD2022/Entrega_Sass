@@ -9,20 +9,22 @@
 }
 
 .quienes_somos{
-    width: 600px;
+    width: 450px;
     font-family: $font-secondary;
     margin-top: $spacing-medium;
     margin-left: $spacing-base;
+    line-height: $line-height-base;
 }
 
 .titulo_nosotros h3{
-    width: 600px;
-    font-size: $text-base;
+    width: 450px;
+    font-size: $text-small;
     margin-top: $spacing-large;
 }
 
 .informacion{
-    font-size: $text-base;
+    width: 450px;
+    font-size: $text-small;
     margin-top: $spacing-base;
     text-align: justify;
 }
@@ -65,14 +67,14 @@
     }
     
     .informacion{
-        width: 500px;
+        width: 400px;
         font-size: $text-small;
         margin-top: $spacing-small;
         text-align: justify;
     }    
     
     .imagen__nosotros img{
-        width: 500px;
+        width: 300px;
         border-radius: $radius-large;
     }
 }
@@ -99,7 +101,7 @@
     }    
     
     .imagen__nosotros img{
-        width: 400px;
+        width: 300px;
         border-radius: $radius-large;
     }
 

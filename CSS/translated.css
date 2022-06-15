@@ -7,6 +7,7 @@
 /*---Font-Family---*/
 /*---Font Sizes---*/
 /*---Border Radius---*/
+/*---Line-height---*/
 * {
   margin: 0;
   padding: 0;
@@ -45,6 +46,7 @@ h2 {
 /* Partials */
 footer {
   width: 90%;
+  max-width: 1200px;
   margin: 20px auto;
   display: grid;
   grid-gap: 2rem;
@@ -117,6 +119,7 @@ footer {
 /*---HEADER---*/
 .header {
   width: 90%;
+  max-width: 1200px;
   margin: 2rem auto;
   display: grid;
   grid-gap: 2rem;
@@ -173,6 +176,7 @@ footer {
 /*---HOME---*/
 .principal {
   width: 90%;
+  max-width: 1200px;
   margin: 2rem auto;
   display: grid;
   grid-gap: 2rem;
@@ -201,7 +205,8 @@ footer {
     text-align: center;
     color: #8f8e8e;
     width: 70%;
-    margin: 3rem 0px 3rem 0px; }
+    margin: 3rem 0px 3rem 0px;
+    font-family: "Barlow", sans-serif; }
 
 .pilares {
   display: flex;
@@ -270,18 +275,20 @@ footer {
   margin-top: 5rem; }
 
 .quienes_somos {
-  width: 600px;
+  width: 450px;
   font-family: "Barlow", sans-serif;
   margin-top: 3rem;
-  margin-left: 2rem; }
+  margin-left: 2rem;
+  line-height: 1.5em; }
 
 .titulo_nosotros h3 {
-  width: 600px;
-  font-size: 1.8em;
+  width: 450px;
+  font-size: 1.6em;
   margin-top: 5rem; }
 
 .informacion {
-  font-size: 1.8em;
+  width: 450px;
+  font-size: 1.6em;
   margin-top: 2rem;
   text-align: justify; }
 
@@ -313,12 +320,12 @@ footer {
     font-size: 1.8em;
     margin-top: 5rem; }
   .informacion {
-    width: 500px;
+    width: 400px;
     font-size: 1.6em;
     margin-top: 1.5rem;
     text-align: justify; }
   .imagen__nosotros img {
-    width: 500px;
+    width: 300px;
     border-radius: 2rem; } }
 
 @media (max-width: 576px) {
@@ -337,12 +344,13 @@ footer {
     margin-top: 1.5rem;
     text-align: justify; }
   .imagen__nosotros img {
-    width: 400px;
+    width: 300px;
     border-radius: 2rem; } }
 
 /*---SERVICIOS---*/
 .servicios {
   width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly; }
@@ -350,10 +358,11 @@ footer {
     font-size: 1.6em;
     font-family: "Barlow", sans-serif;
     text-align: justify;
-    margin-top: 1.5rem; }
+    margin-top: 1.5rem;
+    line-height: 1.2em; }
 
 .servicios_offset {
-  width: 400px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -361,7 +370,7 @@ footer {
   align-items: center; }
 
 .servicios_digital {
-  width: 400px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -369,7 +378,7 @@ footer {
   align-items: center; }
 
 .servicios_com_visual {
-  width: 400px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -377,7 +386,7 @@ footer {
   align-items: center; }
 
 .servicios h3 {
-  width: 380px;
+  width: 300px;
   text-align: center; }
 
 .container__servicios {
@@ -431,6 +440,14 @@ footer {
     width: 100%;
     display: none; } }
 
+.card-title {
+  font-weight: bold; }
+
+.card-text {
+  font-family: "Barlow", sans-serif;
+  padding: 2rem;
+  text-align: justify; }
+
 /*---CONTACTO---*/
 .contact-form {
   display: flex;
@@ -445,11 +462,12 @@ footer {
 
 .ayuda {
   font-size: 1.6em;
-  width: 50%;
+  width: 40%;
   margin-left: 2rem;
   margin-top: 2rem;
   text-align: justify;
-  font-family: "Barlow", sans-serif; }
+  font-family: "Barlow", sans-serif;
+  line-height: 1.2em; }
   .ayuda h3 {
     font-weight: bolder; }
   .ayudap {

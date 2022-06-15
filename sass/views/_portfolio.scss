@@ -1,1 +1,11 @@
 // Toma los estilos de Bootstrap.
+
+.card-title{
+    font-weight: bold;
+}
+
+.card-text{
+    font-family: $font-secondary;
+    padding: $spacing-base;
+    text-align: justify;
+}

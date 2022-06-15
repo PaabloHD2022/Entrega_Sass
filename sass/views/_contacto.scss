@@ -15,11 +15,12 @@
 
 .ayuda{
     font-size: $text-small;
-    width: 50%;
+    width: 40%;
     margin-left: $spacing-base;
     margin-top: $spacing-base;
     text-align: justify;
     font-family: $font-secondary;
+    line-height: $line-height-small;
 
     & h3{
         font-weight: bolder;
