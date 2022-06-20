@@ -3,40 +3,27 @@
 .seccion__nosotros{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    text-align: center;
-    margin-top: $spacing-large;
-}
-
-.quienes_somos{
-    width: 450px;
-    font-family: $font-secondary;
-    margin-top: $spacing-medium;
-    margin-left: $spacing-base;
-    line-height: $line-height-base;
-}
-
-.titulo_nosotros h3{
-    width: 450px;
-    font-size: $text-small;
-    margin-top: $spacing-large;
+    justify-content: space-between;
 }
 
 .informacion{
-    width: 450px;
-    font-size: $text-small;
-    margin-top: $spacing-base;
+    width: 100%;
+    font-size: $text-base;
+    font-family: $font-secondary;
     text-align: justify;
-}
-
-.imagen__nosotros{
-    margin: $spacing-base;
+    margin: $spacing-large $spacing-base;
+    line-height: $line-height-small;
+    color: $text-color-3;
 }
 
 .imagen__nosotros img{
-    width: 600px;
-    border-radius: $radius-large;
-    margin: $spacing-base;
+        width: 550px;
+        margin: $spacing-large $spacing-base;
+    }
+
+.planta__pc{
+    text-align: center;
+    padding-bottom: $spacing-large;
 }
 
 /*---RESPONSIVE---*/

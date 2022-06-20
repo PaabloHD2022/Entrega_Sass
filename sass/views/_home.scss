@@ -14,13 +14,36 @@
 	box-shadow: 0px 0px 70px $box-shadow;
 }
 
+.card{
+    border-bottom-right-radius: $radius-large;
+    border-bottom-left-radius: $radius-large;
+    height: 500px;
+}
+
 .card-text{
     font-size: $text-small;
+    line-height: $line-height-small;
+    font-family: $font-secondary;
+    padding: $spacing-base;
+    text-align: justify;
+    color: $text-color-3;
 }
 
 .card-title{
-    font-size: $text-base;
+    margin-top: $spacing-small;
+    font-size: $text-medium;
     font-weight: bold;
+    text-align: center;
+    color: $text-color-4;
+}
+
+.card-img-top{
+    padding: $spacing-small;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 30px $box-shadow;
+    transition: all 0.5s ease;
 }
 
 .articulos2{
@@ -29,7 +52,6 @@
     align-items: center;
     justify-content: center;
     padding: $spacing-small;
-
 
     &>p{
         font-size: $text-base;
@@ -40,6 +62,7 @@
         font-family: $font-secondary;
     }
 }
+
 .pilares {
     display: flex;
     flex-wrap: wrap;
@@ -64,15 +87,6 @@
 
 .articulos2 p{
     color: $text-color;
-}
-
-.articulos2 ul li{
-    font-size: $text-base;
-    text-align:center;
-    list-style: none;
-    padding: $spacing-small;
-    color: $primary;
-    font-weight: bold;
 }
 
 //RESPONSIVE
@@ -116,4 +130,17 @@
         font-weight: bold;
         text-align: center;
     }
+}
+
+@media (max-width: 320px) {
+    .titulo__principal{
+        margin-top: $spacing-small;
+        text-align: center;
+        font-size: $text-medium;
+        color: $titulo-h1-color;
+        font-weight: bold;
+    }
+    
+
+
 }

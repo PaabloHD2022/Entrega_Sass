@@ -34,12 +34,12 @@
         display: block;
         text-decoration: none;
         text-transform: uppercase;
-        font-weight: 400;
+        font-weight: 500;
         width: 100%;
         text-align: center;
         transition: 0.2s ease all;
-        font-size: $text-xsmall;
-    
+        font-size: $text-small;
+            
         &:hover {
         background: $hover-background;
         color: $alternative2;

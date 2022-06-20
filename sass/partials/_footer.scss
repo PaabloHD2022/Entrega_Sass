@@ -36,7 +36,8 @@ footer{
     }
 }
 
-.redes_sociales img{
+.redes_sociales{
+    width: 50px;
     margin: $spacing-xsmall;
 }
 
@@ -67,7 +68,7 @@ footer{
 @media (max-width: 992px) {
     .footer__nav{
         display: flex;
-        flex-direction:column;
+        flex-direction:row;
         padding: $spacing-xsmall;
     }
 }
@@ -91,6 +92,15 @@ footer{
     }
 
     .menu a {
+        font-size: $text-xsmall;
+    }
+
+    .redes_sociales{
+        margin: $spacing-xxsmall;
+        width: $width-base;
+    }
+
+    .copyright{
         font-size: $text-xsmall;
     }
 

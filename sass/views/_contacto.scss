@@ -1,11 +1,17 @@
 /*---CONTACTO---*/
 
+.principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 .contact-form {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 100%;
+    
 }
 
 .form-header h3{
@@ -14,8 +20,8 @@
 }
 
 .ayuda{
-    font-size: $text-small;
-    width: 40%;
+    font-size: $text-xsmall;
+    width: 50%;
     margin-left: $spacing-base;
     margin-top: $spacing-base;
     text-align: justify;
@@ -33,24 +39,23 @@
 
 .contenedor .form{
     background: $background-color;
-    width: 100%;
-    margin: $spacing-large;
-    padding: $spacing-xxsmall $spacing-medium;
-    margin: $spacing-medium;
-    padding-bottom: $spacing-medium;
-    border-radius: $radius-small;
+    margin: $spacing-base;
+    padding: $spacing-base;
+    margin: $spacing-base;
+    border-bottom-right-radius: $radius-large;
+    border-bottom-left-radius: $radius-large;
 
     & .form-header .form-title{
         font-weight: normal;
         color: $background-color;
         text-align: center;
-        padding: $spacing-xsmall;
+        padding: $spacing-base;
     }
 
     & .form-label{
         display: flex;
         color: $text-color-2;
-        font-size: $text-small;
+        font-size: $text-base;
         font-family: $font-secondary;
     }
 
@@ -59,9 +64,8 @@
         border: none;
         outline: none;
         width: 100%;
-        padding: $spacing-xsmall;
-        margin-bottom: $spacing-xsmall;
-        border-radius: $radius-small;
+        padding: $spacing-small;
+        margin-bottom: $spacing-small;
     }
 
     & .form-textarea{
@@ -80,12 +84,17 @@
         padding: $spacing-small 0px;
         cursor: pointer;
         transition: all .5s;
-        border-radius: $radius-small;
+        border-bottom-right-radius: $radius-small;
+        border-bottom-left-radius: $radius-small;
         
         &:hover{
             background: $secondary;
         }    
     }    
+}
+
+.map-responsive{
+    margin-top: $spacing-base;
 }
 
 //REPONSIVE
