@@ -15,8 +15,13 @@
     $titulo-h2-color: #606060;
     $titulo-h3-color: #fff;
     $background-gradient: linear-gradient(to top, #727272, #d1d1d1);
-    $background-color: #8f8e8e;    
+    $background-color: #8f8e8e;
+    $background-color-2: #333;  
     $box-shadow: rgba(63, 63, 63, 0.61);
+    $facebook: #3b5999;
+    $instagram: #e4405f;
+    $twitter: #55acee;
+    $whatsapp: #25D366;
 
     /*---Spacing---*/
 
@@ -45,15 +50,17 @@
 
     /*---Border Radius---*/
 
+    $radius-full: 10rem;
     $radius-large: 2rem;
     $radius-medium: 1.5rem;
     $radius-small: 1rem;
 
     /*---Line-height---*/
+    $line-height-xlarge: 5em;
     $line-height-large: 1.8em;
     $line-height-base: 1.5em;
     $line-height-small: 1.2em;
 
     /*---Image-Size---*/
     $width-base: 5rem;
-    $width-base: 3rem;
+    $width-small: 3rem;

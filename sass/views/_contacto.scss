@@ -20,9 +20,8 @@
 }
 
 .ayuda{
-    font-size: $text-xsmall;
+    font-size: $text-small;
     width: 50%;
-    margin-left: $spacing-base;
     margin-top: $spacing-base;
     text-align: justify;
     font-family: $font-secondary;
@@ -38,10 +37,10 @@
 }
 
 .contenedor .form{
+    width: 450px;
     background: $background-color;
-    margin: $spacing-base;
-    padding: $spacing-base;
-    margin: $spacing-base;
+    margin-top: $spacing-large;
+    padding: $spacing-small;
     border-bottom-right-radius: $radius-large;
     border-bottom-left-radius: $radius-large;
 
@@ -66,6 +65,8 @@
         width: 100%;
         padding: $spacing-small;
         margin-bottom: $spacing-small;
+        font-family: $font-secondary;
+        font-size: $text-xsmall;
     }
 
     & .form-textarea{
@@ -73,6 +74,7 @@
         max-height: $spacing-xlarge;
         min-height: $spacing-large;
         font-family: $font-secondary;
+        font-size: $text-small;
     }
 
     & .btn-submit{
@@ -112,5 +114,10 @@
         flex-direction: row;
         justify-content: space-evenly;
         width: 90%;
-    }           
+    }
+    
+    .map-responsive{
+        width: 300px;
+        text-align: center;
+    }
 }

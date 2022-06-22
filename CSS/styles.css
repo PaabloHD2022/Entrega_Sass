@@ -48,13 +48,13 @@ h2 {
 footer {
   width: 90%;
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 2rem auto;
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: 'footer';
-  padding: 2rem;
+  padding: 1.5rem;
   background-image: linear-gradient(to top, #727272, #d1d1d1);
   box-shadow: 0px 0px 70px rgba(63, 63, 63, 0.61); }
 
@@ -62,7 +62,7 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 1.5rem; }
 
 .footer__menu li {
@@ -70,13 +70,38 @@ footer {
   .footer__menu li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.6em; }
+    font-size: 1.6em;
+    align-items: center; }
     .footer__menu li a:hover {
       color: #000000; }
 
-.redes_sociales {
-  width: 50px;
-  margin: 1rem; }
+.redes-container {
+  display: flex;
+  align-items: center; }
+  .redes-container ul li {
+    display: inline-block;
+    margin: 0 1rem;
+    width: 5rem;
+    height: 5rem;
+    text-align: center; }
+    .redes-container ul li .facebook:hover {
+      background: #3b5999; }
+    .redes-container ul li .twitter:hover {
+      background: #55acee; }
+    .redes-container ul li .instagram:hover {
+      background: #e4405f; }
+    .redes-container ul li .whatsapp:hover {
+      background: #25D366; }
+    .redes-container ul li a {
+      display: block;
+      padding: 0 0.5rem;
+      background: #333;
+      color: #fff;
+      line-height: 5rem;
+      font-size: 3.5em; }
+      .redes-container ul li a:hover {
+        transform: translateY(3px) scale(1.05);
+        box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.4); }
 
 .formulario2 {
   width: 50%;
@@ -85,16 +110,22 @@ footer {
   text-align: justify;
   font-size: 1.8em; }
 
-.email {
-  font-size: 1.6em;
-  text-decoration-line: none; }
-
-.phone {
-  color: #fff;
-  font-size: 1.6em; }
-
-.copyright {
-  font-size: 1.6em; }
+.info-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+  .info-footer .email {
+    font-size: 1.6em;
+    text-decoration-line: none;
+    padding: 1rem; }
+  .info-footer .phone {
+    color: #fff;
+    font-size: 1.6em;
+    padding: 1rem; }
+  .info-footer .copyright {
+    font-size: 1em;
+    padding: 1rem; }
 
 @media (max-width: 992px) {
   .footer__nav {
@@ -119,9 +150,15 @@ footer {
     font-size: 1.4em; }
   .redes_sociales {
     margin: 0.5rem;
-    width: 3rem; }
+    width: 5rem; }
   .copyright {
     font-size: 1.4em; } }
+
+@media (max-width: 320px) {
+  .footer__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; } }
 
 /*---HEADER---*/
 .header {
@@ -140,7 +177,8 @@ footer {
   box-shadow: 0px 0px 70px rgba(63, 63, 63, 0.61); }
 
 .logo img {
-  width: 350px; }
+  width: 350px;
+  margin-left: 1.5rem; }
 
 .menu {
   margin-top: 1rem;
@@ -340,10 +378,10 @@ footer {
 .seccion__nosotros {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-evenly; }
 
 .informacion {
-  width: 100%;
+  width: 500px;
   font-size: 1.8em;
   font-family: "Barlow", sans-serif;
   text-align: justify;
@@ -352,7 +390,7 @@ footer {
   color: #5f5f5f; }
 
 .imagen__nosotros img {
-  width: 550px;
+  width: 500px;
   margin: 5rem 2rem; }
 
 .planta__pc {
@@ -530,9 +568,8 @@ footer {
   font-weight: bolder; }
 
 .ayuda {
-  font-size: 1.4em;
+  font-size: 1.6em;
   width: 50%;
-  margin-left: 2rem;
   margin-top: 2rem;
   text-align: justify;
   font-family: "Barlow", sans-serif;
@@ -543,10 +580,10 @@ footer {
     font-weight: bolder; }
 
 .contenedor .form {
+  width: 450px;
   background: #8f8e8e;
-  margin: 2rem;
-  padding: 2rem;
-  margin: 2rem;
+  margin-top: 5rem;
+  padding: 1.5rem;
   border-bottom-right-radius: 2rem;
   border-bottom-left-radius: 2rem; }
   .contenedor .form .form-header .form-title {
@@ -565,12 +602,15 @@ footer {
     outline: none;
     width: 100%;
     padding: 1.5rem;
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1.5rem;
+    font-family: "Barlow", sans-serif;
+    font-size: 1.4em; }
   .contenedor .form .form-textarea {
     resize: vertical;
     max-height: 15rem;
     min-height: 5rem;
-    font-family: "Barlow", sans-serif; }
+    font-family: "Barlow", sans-serif;
+    font-size: 1.6em; }
   .contenedor .form .btn-submit {
     width: 100%;
     background: #8f8e8e;
@@ -598,4 +638,7 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 90%; } }
+    width: 90%; }
+  .map-responsive {
+    width: 300px;
+    text-align: center; } }
