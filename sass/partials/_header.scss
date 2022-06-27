@@ -1,5 +1,4 @@
 /*---HEADER---*/
-
 .header {
     width: 90%;
     max-width: 1200px;
@@ -9,70 +8,74 @@
     grid-template-columns: (1fr);
     grid-template-rows: (1fr);
     grid-template-areas: 'header';
-    padding: $spacing-xsmall;
-	background: url(../Img/Header-fondo-2.png);
-    background-color: $alternative2;
-    background-repeat: no-repeat;
+    padding: $spacing-xxsmall;
+    background: $background-gradient-2;   
 	box-shadow: 0px 0px 70px $box-shadow;
+    font-family: $font-secondary;
+    border-top-left-radius: $radius-large;
+    border-top-right-radius: $radius-large;
 }
 
-.logo img{
-    width: 350px;
-    margin-left: $spacing-small;
-}
-
-.menu {
-    margin-top: $spacing-xsmall;
-    border-top: 1px solid $primary;
-	border-bottom: 1px solid $primary;
-	display: flex;
-    flex-direction: row;
+.menu__header{
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    font-size: $text-xxsmall;
+    font-weight: bold;
+}
 
-    & a {
-        padding: $spacing-xxsmall;
-        color: $primary;
-        display: block;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 500;
-        width: 100%;
-        text-align: center;
-        transition: 0.2s ease all;
-        font-size: $text-small;
+.logo__header{
+    margin-top: $spacing-small;
+    width: 350px;
+    text-align: center;
+}
+
+.nav__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: $spacing-small;
+    
             
-        &:hover {
-        background: $hover-background;
-        color: $alternative2;
+        & a {
+            padding: 0 $spacing-medium;
+            color: $alternative2;
+            text-decoration: none;
+            width: 100%;
+            text-align: center;
+            font-size: $text-small;
+            text-transform: uppercase;                
+    
+            &:hover {
+            color: $alternative4;
+            transition: 0.2s ease all;
         }
     }
 }
+
 
 //RESPONSIVE
 
 @media (max-width: 768px){
     .header {
         width: 90%;
-        margin: $spacing-base auto;
-        display: grid;
-        grid-gap: $spacing-base;
-        grid-template-columns: (1fr);
-        grid-template-rows: (1fr);
-        grid-template-areas: 'header';
-        background: url(../Img/Header-fondo-3.png);
-        background-repeat: no-repeat;
-        padding: $spacing-base;
-        text-align: center;
-    }
-
-    .logo img{
-        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         
     }
-
 }
 
-@media (max-width: 576px){
+    @media (max-width: 576px){
+        .header{
+                
+            & img{
+            width: 250px;
+            text-align: center;
+        }
+    }
+
     .menu {
         margin-top: $spacing-xsmall;
         border-top: 1px solid $primary;
@@ -98,8 +101,15 @@
 }
 
 @media (max-width: 320px){
-    .menu {
-        margin-top: $spacing-xsmall;
+    .header{
+        
+        & img{
+        width: 200px;
+        text-align: center;
+    }
+}     
+    
+    .menu {        
         border-top: 1px solid $primary;
         border-bottom: 1px solid $primary;
         display: flex;
@@ -107,7 +117,6 @@
         justify-content: space-between;
     
         & a {
-            padding: $spacing-xxsmall;
             color: $primary;
             display: block;
             text-decoration: none;
@@ -117,11 +126,6 @@
             text-align: center;
             transition: 0.2s ease all;
             font-size: $text-xxsmall;
-        }
-
-        .logo img{
-            width: 200px;
-            
         }
 
     }

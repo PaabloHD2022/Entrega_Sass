@@ -8,6 +8,7 @@
 
 .informacion{
     width: 500px;
+    max-width: 100%;
     font-size: $text-base;
     font-family: $font-secondary;
     text-align: justify;
@@ -18,10 +19,12 @@
 
 .imagen__nosotros img{
         width: 500px;
+        max-width: 100%;
         margin: $spacing-large $spacing-base;
     }
 
 .planta__pc{
+    max-width: 100%;
     text-align: center;
     padding-bottom: $spacing-large;
 }
@@ -37,9 +40,20 @@
         margin-top: $spacing-base;
     }
 
+    .planta__pc{
+        display: none;
+    }
+
 } 
 
 @media (max-width: 768px){
+    .seccion__nosotros{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: $spacing-base;
+    }
+
     .quienes_somos{
         width: 500px;
         font-family: $font-secondary;
@@ -61,8 +75,7 @@
     }    
     
     .imagen__nosotros img{
-        width: 300px;
-        border-radius: $radius-large;
+        width: 400px;
     }
 }
 
@@ -86,10 +99,4 @@
         margin-top: $spacing-small;
         text-align: justify;
     }    
-    
-    .imagen__nosotros img{
-        width: 300px;
-        border-radius: $radius-large;
-    }
-
-}
+}    

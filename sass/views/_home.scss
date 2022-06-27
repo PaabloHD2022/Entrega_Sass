@@ -5,13 +5,13 @@
     max-width: 1200px;    
     margin: $spacing-base auto;
     display: grid;
-    grid-gap: $spacing-base;
+    grid-gap: $spacing-small;
     grid-template-columns: (1fr);
     grid-template-rows: (1fr);
     grid-template-areas: 'principal';
     padding: $spacing-base;
-	background: $alternative2;
-	box-shadow: 0px 0px 70px $box-shadow;
+	background-color: $alternative2;
+    box-shadow: 0px 0px 70px $box-shadow;
 }
 
 .card{
@@ -130,17 +130,39 @@
         font-weight: bold;
         text-align: center;
     }
+
+    .card-text{
+        font-size: $text-small;
+    }
 }
 
 @media (max-width: 320px) {
     .titulo__principal{
         margin-top: $spacing-small;
         text-align: center;
-        font-size: $text-medium;
+        font-size: $text-base;
         color: $titulo-h1-color;
         font-weight: bold;
     }
-    
 
+    .card-img-top{
+        width: 230px;
+    }
 
+    .card-text{
+        font-size: $text-xsmall;
+    }
+
+    .articulos2>p{
+        font-size: $text-xsmall;
+    }
+
+    .pilares p{
+        font-size: $text-xsmall;
+        margin: $spacing-xxsmall 0px $spacing-xxsmall 0px;
+    }
+
+    h2{
+        font-size: $text-xxsmall;
+    }
 }
