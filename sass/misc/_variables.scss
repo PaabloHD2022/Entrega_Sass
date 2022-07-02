@@ -4,23 +4,30 @@
     $alternative: #cccccc;
     $alternative2: #fff;
     $alternative3: #e7e7e7;
-    $alternative4: #ec9d0b;
+    $alternative4: #f78710;
     $hover-background: #414141;
     $hover-text-color: #fff;
     $text-color: #2B2B2B;
     $text-color-2: #fff;
     $text-color-3: #5f5f5f;
     $text-color-4: #414141;
+    $text-color-5: #17164b;
+    $text-color-6: #ff0000;
     $titulo-h1-color: #606060;
+    $titulo-h1-color-2: #17164b;
     $titulo-h2-color: #494949;
     $titulo-h3-color: #fff;
+    $background-gradient-body: repeating-linear-gradient(90deg, #c4c0c0, #fff 20px, #fbfbfb 20px, #fbfbfb 40px);
     $background-gradient: linear-gradient(to top, #727272, #d1d1d1);
     $background-gradient-2: linear-gradient(to bottom, #070a0e, #17559f);
     $background-gradient-3: linear-gradient(to top, #292929, #5a5a5a);
+    $background-gradient-4: linear-gradient(to top, #949494, #dfdfdf);
     $background-color: #8f8e8e;
     $background-color-2: #333;
-    $background-color-3: #063d81;  
-    $box-shadow: rgba(63, 63, 63, 0.61);
+    $background-color-3: #063d81;
+    $background-color-4: #d8d8d8;
+    $background-color-3-transparent: rgba(0, 103, 123, 0.7);
+    $box-shadow: rgb(172, 172, 172);
     $facebook: #1244b1;
     $instagram: #e41d41;
     $twitter: #158be6;
@@ -38,11 +45,14 @@
     /*---Font-Family---*/
     $font-principal: 'Sora', sans-serif;
     $font-secondary: 'Barlow', sans-serif;
+    $font-eventual: 'Anton', sans-serif;
+    $font-eventual-2: 'Permanent Marker', cursive;
 
     /*---Font Sizes---*/
     $text-xlarge: 4.0em;
     $text-large: 3.5em;
     $text-medium: 2.4em;
+    $text-base-2: 2em;
     $text-base: 1.8em;
     $text-small: 1.6em;
     $text-xsmall: 1.4em;
@@ -53,6 +63,7 @@
     $radius-large: 2rem;
     $radius-medium: 1.5rem;
     $radius-small: 1rem;
+    $radius-xsmall: 0.6rem;
 
     /*---Line-height---*/
     $line-height-xlarge: 5em;

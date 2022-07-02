@@ -1,22 +1,5 @@
 /*---SERVICIOS---*/
 
-.servicios{
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
-
-    & p{
-        font-size: $text-small;
-        font-family: $font-secondary;
-        text-align: justify;
-        margin-top: $spacing-small;
-        line-height: $line-height-small;
-    }
-}
-
 .servicios_offset{
     width: 300px;
     display: flex;

@@ -13,14 +13,14 @@ html {
 body{
     width: 100%;
     font-family: $font-principal;
-    background-color: $alternative3;
+    background-image: repeating-linear-gradient(90deg, #fff, #fff 20px, #fbfbfb 20px, #fbfbfb 40px);
 }
 
 .titulo__principal{
     margin-top: $spacing-small;
     text-align: center;
     font-size: $text-xlarge;
-    color: $titulo-h1-color;
+    color: $titulo-h1-color-2;
     font-weight: bold;
 
 }

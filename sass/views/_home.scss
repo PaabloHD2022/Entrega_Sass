@@ -11,13 +11,14 @@
     grid-template-areas: 'principal';
     padding: $spacing-base;
 	background-color: $alternative2;
-    box-shadow: 0px 0px 70px $box-shadow;
+    box-shadow: 0px 5px 70px $box-shadow;
 }
 
 .card{
-    border-bottom-right-radius: $radius-large;
-    border-bottom-left-radius: $radius-large;
-    height: 500px;
+    margin-top: $spacing-base;
+    border-radius: $radius-small;
+    border-radius: $radius-small;
+    height: 500px;    
 }
 
 .card-text{
@@ -34,7 +35,7 @@
     font-size: $text-medium;
     font-weight: bold;
     text-align: center;
-    color: $text-color-4;
+    color: $text-color-5;
 }
 
 .card-img-top{
@@ -46,48 +47,112 @@
     transition: all 0.5s ease;
 }
 
-.articulos2{
+.articulos{
+    width: 95%;
+    margin: $spacing-small auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: $spacing-small;
-
+        
     &>p{
         font-size: $text-base;
         text-align: center;
-        color: $background-color;
-        width: 70%;
-        margin: $spacing-medium 0px $spacing-medium 0px;
-        font-family: $font-secondary;
+        color: $secondary;
+        width: 100%;
+        margin: $spacing-small 0px $spacing-small 0px;
+        font-family: $font-principal;
+        padding: $spacing-xsmall;
     }
 }
 
-.pilares {
+.pilares{
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width:90%;
-    background: url(../Img/pantone-1.png);
-    background-repeat: no-repeat;
 
-    & img{
-        width: 210px;
-        padding: $spacing-medium;
+    & .contenedor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: $spacing-base;
+    
+        & figure{
+            position:relative;
+            height: 300px;
+            cursor: pointer;
+            width: 450px;
+            overflow: hidden;
+            border-radius: $radius-xsmall;
+            box-shadow: 0px 15px 25px $box-shadow;
+        
+            & img{
+                width: 100%;
+                height: 100%;
+                transition: all 400ms ease-out;
+                will-change: transform;
+            }
+    
+            & .capa{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: $background-color-3-transparent;
+                transition: all 400ms ease-out;
+                opacity: 0;
+                visibility: hidden;
+                text-align: center;
+            
+                & h3{
+                    color: #fff;
+                    font-weight: 400;
+                    margin-bottom: 120px;
+                    transition: all 400ms ease-out;
+                    margin-top: $spacing-medium;
+                    font-size: $text-medium;
+                }
+    
+                & p{
+                    color: #fff;
+                    font-size: 15px;
+                    line-height: 1.5;
+                    width: 100%;
+                    max-width: 320px;
+                    margin: auto;
+                }        
+            }
+    
+            &:hover > .capa {
+                opacity: 1;
+                visibility: visible;
+            
+                & h3{
+                    margin-top: 70px;
+                    margin-bottom: 15px;
+                }
+            }    
+        }
+    
+        & figure:hover > img{
+            transform: scale(1.3);
+        }
     }
 
-    & p{
-        font-size: $text-base;
-        padding: $spacing-xsmall;
-        font-weight: bold;
-    }
 }
 
-.articulos2 p{
-    color: $text-color;
-}
+
+
+
+
+
+
+
+
+
 
 //RESPONSIVE
 
