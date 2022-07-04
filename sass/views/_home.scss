@@ -82,9 +82,9 @@
     
         & figure{
             position:relative;
-            height: 300px;
+            height: 250px;
             cursor: pointer;
-            width: 450px;
+            width: 400px;
             overflow: hidden;
             border-radius: $radius-xsmall;
             box-shadow: 0px 15px 25px $box-shadow;
@@ -108,7 +108,7 @@
                 text-align: center;
             
                 & h3{
-                    color: #fff;
+                    color: $alternative;
                     font-weight: 400;
                     margin-bottom: 120px;
                     transition: all 400ms ease-out;
@@ -117,8 +117,8 @@
                 }
     
                 & p{
-                    color: #fff;
-                    font-size: 15px;
+                    color: $alternative;
+                    font-size: $text-small;
                     line-height: 1.5;
                     width: 100%;
                     max-width: 320px;
@@ -131,8 +131,8 @@
                 visibility: visible;
             
                 & h3{
-                    margin-top: 70px;
-                    margin-bottom: 15px;
+                    margin-top: $spacing-large-3;
+                    margin-bottom: $spacing-small;
                 }
             }    
         }
@@ -141,38 +141,26 @@
             transform: scale(1.3);
         }
     }
-
 }
 
-
-
-
-
-
-
-
-
+.pilares2{
+    display: none;
+}
 
 
 //RESPONSIVE
 
-@media (max-width: 992px) {
-    .articulos2{
+@media (max-width: 1060px){
+    .pilares{
+        width: 90%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
         justify-content: center;
-        padding: $spacing-small;
-    }
-    
-    .articulos2>p{
-        font-size: $text-base;
-        text-align: center;
-        color: $background-color;
-        width: 70%;
-        margin: $spacing-medium 0px $spacing-medium 0px;
-    }
-    
+        align-items: center;
+    }   
+}
+
+@media (max-width: 992px){
     .pilares {
         display: flex;
         flex-wrap: wrap;
@@ -185,7 +173,7 @@
     }
     
     .pilares img{
-        width: 150px;
+        width: 250px;
         padding: $spacing-base;
     }
     
@@ -198,36 +186,161 @@
 
     .card-text{
         font-size: $text-small;
+        text-align: center;
     }
+}
+
+@media (max-width: 586px){
+    .titulo__principal{
+        margin-top: $spacing-small;
+        text-align: center;
+        font-size: $text-large;
+    }
+    
+    .pilares{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    
+    & .contenedor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: $spacing-base;
+    
+        & figure{
+            position:relative;
+            height: 250px;
+            cursor: pointer;
+            width: 400px;
+            border-radius: $radius-xsmall;
+            box-shadow: 0px 15px 25px $box-shadow;
+        
+            & img{
+                width: 100%;
+                height: 100%;
+                transition: all 400ms ease-out;
+                will-change: transform;
+            }
+    
+            & .capa{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: $background-color-3-transparent;
+                transition: all 400ms ease-out;
+                opacity: 0;
+                visibility: hidden;
+                text-align: center;
+            
+                & h3{
+                    color: $alternative;
+                    font-weight: 400;
+                    margin-bottom: 120px;
+                    transition: all 400ms ease-out;
+                    margin-top: $spacing-medium;
+                    font-size: $text-medium;
+                }
+    
+                & p{
+                    color: $alternative;
+                    font-size: $text-small;
+                    line-height: 1.5;
+                    width: 100%;
+                    max-width: 320px;
+                    margin: auto;
+                }        
+            }
+    
+            &:hover > .capa {
+                opacity: 1;
+                visibility: visible;
+            
+                & h3{
+                    margin-top: $spacing-large-3;
+                    margin-bottom: $spacing-small;
+                }
+            }    
+        }
+    }
+}
+}
+
+@media (max-width: 500px){
+    .pilares{
+        display: none;
+    }
+
+    .pilares2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid $secondary;
+        padding: $spacing-small;
+            
+        & h3{
+            color: $text-color-5;
+            font-size: $text-base;
+        }
+
+        & li{
+            margin-top: $spacing-small;
+        }
+
+        & p{
+            font-size: $text-small;
+            color: $text-color-3;
+            text-align: match-parent;
+        }
+    
+    }
+
+
 }
 
 @media (max-width: 320px) {
     .titulo__principal{
         margin-top: $spacing-small;
         text-align: center;
-        font-size: $text-base;
-        color: $titulo-h1-color;
-        font-weight: bold;
+        font-size: $text-medium;        
+    }  
+
+    & h2{    
+        font-size: $text-xxsmall;
     }
 
-    .card-img-top{
-        width: 230px;
+    .card{
+        margin-top: $spacing-xsmall;
+        height: 350px;    
     }
 
     .card-text{
         font-size: $text-xsmall;
+        line-height: $line-height-xsmall;
     }
 
-    .articulos2>p{
-        font-size: $text-xsmall;
+    .pilares2{
+        padding: $spacing-xsmall;
+            
+        & h3{
+            color: $text-color-5;
+            font-size: $text-small;
+        }
+
+        & li{
+            margin-top: $spacing-xsmall;
+        }
+
+        & p{
+            font-size: $text-xsmall;
+            color: $text-color-3;
+            text-align: match-parent;
+        }
+    
     }
 
-    .pilares p{
-        font-size: $text-xsmall;
-        margin: $spacing-xxsmall 0px $spacing-xxsmall 0px;
-    }
-
-    h2{
-        font-size: $text-xxsmall;
-    }
 }
+

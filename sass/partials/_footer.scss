@@ -3,7 +3,7 @@
 footer{
     width: 90%;
     max-width: 1200px;
-    margin: $spacing-base auto;
+    margin: $spacing-small auto;
     display: grid;
     grid-gap: $spacing-base;
     grid-template-columns: (1fr);
@@ -16,27 +16,25 @@ footer{
 
 }
 
-    .footer__nav{
+    .footer__menu{
         display: flex;
         flex-direction:column;
         justify-content: space-around;
         align-items: center;
     
-        & .footer__menu{
+        & .footer__nav{
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            padding: $spacing-small;
             
             & a {
-                padding: 0 $spacing-medium;
+                padding: $spacing-small;
                 color: $alternative2;
                 text-decoration: none;
                 width: 100%;
                 text-align: center;
                 font-size: $text-small;
                 text-transform: uppercase;
-                font-weight: bold;                 
         
                 &:hover {
                 color: $alternative4;
@@ -48,17 +46,20 @@ footer{
         & .redes__info{
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
 
 
         & .redes__container{
             display: flex;
             flex-direction: row;
-            align-items: center;                       
+            justify-content: space-evenly;
+            padding: $spacing-small;                       
         
             & ul li{
                 display: inline-block;
-                margin: 0 $spacing-base;
+                margin: $spacing-xsmall;
                 width: $width-base;
                 height: $width-base;
                 text-align: center;
@@ -85,10 +86,8 @@ footer{
         
                 & a{
                     display: inline-block;
-                    padding: 0 $spacing-xsmall;
                     color: $alternative2;
-                    line-height: $spacing-large;
-                    font-size: $text-large; 
+                    font-size: $text-xlarge; 
                     
                     &:hover{
                         transform: translateY(3px) scale(1.05);
@@ -98,13 +97,15 @@ footer{
         }
 
         & .info__footer{
-            align-items: center;
-                        
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
             & .email a{
                 font-size: $text-small;
                 text-decoration: none;
                 color: $alternative2;
-                padding: $spacing-xsmall;
+                text-align: center;
 
                 &:hover {
                     color: $alternative4;
@@ -116,7 +117,7 @@ footer{
                 font-size: $text-small;
                 text-decoration: none;
                 color: $alternative2;
-                padding: $spacing-xsmall;
+                text-align: center;
 
                 &:hover {
                     color: $alternative4;
@@ -126,53 +127,120 @@ footer{
         }
     }
 
-        & .copyright{
-            font-size: $text-xxsmall;
-            padding: $spacing-xxsmall;
-            color: $alternative2;
-        }
+    & .copyright{
+        font-size: $text-xxsmall;
+        padding-left: $spacing-base;
+        padding-right: $spacing-base;
+        color: $alternative2;
+        text-align: center;
+    }
 }
 
 
 //RESPONSIVE
 
 @media (max-width: 786px){   
-    .redes__info{
+    .footer__menu{
         display: flex;
         flex-direction: column;
-    }
-
-    .redes__container{
-        display: flex;
-        flex-direction: column;
-    }    
+        justify-content: space-between;
+        place-content: flex-start;
     
-    .info__footer{
-        display: flex;
-        flex-direction: column;
-    }
+        & .footer__nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: $spacing-xsmall;
+        }       
 
+        & .redes__info{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+
+            & .redes__container{
+                display: flex;
+                flex-direction: row;
+                align-items: center;                       
+            
+                }
+            }
+        }
 }
+
 
 
 @media (max-width: 576px) {
     .footer__menu{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        padding: $spacing-xsmall;
-        
-        & a {
-            padding: 0 $spacing-base;
-            color: $alternative2;
-            text-decoration: none;
-            text-align: center;
-            font-size: $text-xsmall;
-            text-transform: uppercase; 
-        }   
+        justify-content: space-between;
+        place-content: flex-start;
+    
+        & .footer__nav{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }       
+
+        & .redes__info{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            & .redes__container{
+                display: flex;
+                flex-direction: row;
+                align-items: center;   
+            }
+            
+            & .info__footer{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    
+                & .email a{
+                    width: 100%;
+                    font-size: $text-small;
+                    text-decoration: none;
+                    color: $alternative2;
+                    text-align: center;
+                }
+            
+                & .phone a{
+                    font-size: $text-small;
+                    text-decoration: none;
+                    color: $alternative2;
+                }
+            }
+        }
     }
 }
 
 @media (max-width: 320px){
-
+    .redes__info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        
+        & .redes__container{
+            display: flex;
+            flex-direction: row;
+            align-items: center; 
+        
+            & ul li a{
+                display: inline-block;
+                margin: $spacing-xsmall;
+                width: $width-small;
+                height: $width-base;
+                text-align: center;
+            }
+        }
+    }
 }
