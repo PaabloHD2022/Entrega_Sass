@@ -1,1 +1,77 @@
 // Toma los estilos de Bootstrap.
+
+.cards__portfolio{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 'card' 'card'
+                         'card' 'card';
+    gap: $spacing-base;
+}
+
+//---RESPONSIVE---
+
+@media(max-width: 768px){
+    .cards__portfolio{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 'card' 
+                             'card'
+                             'card'
+                             'card';
+        gap: $spacing-base;
+    }
+
+    .cards__portfolio{
+        
+        &.card .card-body{
+            height: 75%;
+        }
+        
+        &.card .card-body .card-title{
+            font-size: $text-medium;
+        }
+
+        & .card .card-body .card-text{
+            font-size: $text-small;
+        }
+    }
+}
+
+
+@media(max-width: 510px){
+    .cards__portfolio{
+        
+        &.card .card-body{
+            height: 100%;
+        }
+
+        & .card .card-body .card-text{
+            font-size: $text-xsmall;
+        }
+
+    }
+}
+
+@media(max-width: 369px){
+    .cards__portfolio{
+        
+        &.card .card-body{
+            height: 100%;
+        }
+
+        &.card .card-body .card-title{
+            margin-top: 0;
+            font-size: $text-medium;
+        }
+
+        & .card .card-body .card-text{
+            font-size: $text-xxsmall;
+            line-height: $line-height-xsmall;
+        }
+
+    }
+}
+
+

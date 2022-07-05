@@ -15,7 +15,7 @@
 }
 
 .card{
-    margin-top: $spacing-base;
+    margin-top: $spacing-small;
     border-radius: $radius-small;
     border-radius: $radius-small;
     height: 500px;    
@@ -31,7 +31,6 @@
 }
 
 .card-title{
-    margin-top: $spacing-small;
     font-size: $text-medium;
     font-weight: bold;
     text-align: center;
@@ -185,8 +184,20 @@
     }
 
     .card-text{
-        font-size: $text-small;
+        font-size: $text-xxsmall;
         text-align: center;
+    }
+
+    .card-body{
+        margin-top: 0;
+        height: 300px;    
+    }
+}
+
+@media (max-width: 768px){
+    .card-text{
+        font-size: $text-xxsmall;
+        text-align: justify;
     }
 }
 
@@ -283,7 +294,7 @@
             
         & h3{
             color: $text-color-5;
-            font-size: $text-base;
+            font-size: $text-medium;
         }
 
         & li{
@@ -312,14 +323,14 @@
         font-size: $text-xxsmall;
     }
 
-    .card{
-        margin-top: $spacing-xsmall;
-        height: 350px;    
+    .card-body{
+        margin-top: 0;
+        height: 200px;    
     }
 
     .card-text{
-        font-size: $text-xsmall;
-        line-height: $line-height-xsmall;
+        font-size: $text-xlarge;
+        line-height: $line-height-base;
     }
 
     .pilares2{
@@ -338,9 +349,7 @@
             font-size: $text-xsmall;
             color: $text-color-3;
             text-align: match-parent;
-        }
-    
+        }    
     }
-
 }
 

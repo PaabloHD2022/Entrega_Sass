@@ -39,6 +39,7 @@
     grid-template-rows: (1fr, 1fr);
     justify-content: center;
     text-align: center;
+    margin-top: $spacing-large;
 }
 
 .Offset_2 { 
@@ -80,46 +81,96 @@
 /*---RESPONSIVE---*/
 
 @media (max-width: 1200px) {
-    .servicios{
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+    
 }
+
 
 @media (max-width: 992px) {
     .container__servicios{
         width: 100%;
         display: none;
     }
+    .card-body{
+        margin-top: $spacing-xsmall;
+        height: 75%;    
+    
+        .card-text{
+            font-size: $text-xsmall;
+            line-height: $line-height-xsmall;
+            text-align: justify;
+        }
+
+        .card-title{
+            font-size: $text-base;
+        }
+    }    
 }
 
-@media (max-width: 768px){
+
+@media (max-width: 768px) {
+    .card-body{
+        height: 50%;    
+    
+        .card-text{
+            font-size: $text-xxsmall;
+        }
+
+        .card-title{
+            font-size: $text-base;
+        }
+    }    
+}
+
+
+@media (max-width: 767px) {
+    .card-body{
+        margin-top: 0;
+        height: 50%;    
+    
+        .card-text{
+            font-size: $text-small;
+            line-height: $line-height-small;
+        }
+
+        .card-title{
+            font-size: $text-base;
+        }
+    }    
+}
 
 
 
+@media (max-width: 420px){
+    .card-body{
+        margin-top: $spacing-xsmall;
+        height: 40%;    
+    
+        .card-text{
+            font-size: $text-xsmall;
+            line-height: $line-height-xsmall;
+        }
 
+        .card-title{
+            font-size: $text-base;
+        }
+    }
 }
 
 @media (max-width: 320px){
-    .servicios{
-        width: 100%;
-        max-width: 320px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+    .card-body{
+        margin-top: $spacing-xsmall;
+        height: 45%;    
     
-    
-        & p{
-            font-size: $text-xsmall;
-            font-family: $font-secondary;
-            text-align: justify;
-            margin-top: $spacing-small;
+        .card-text{
+            font-size: $text-small;
             line-height: $line-height-small;
         }
+
+        .card-title{
+            font-size: $text-small;
+        }
     }
-
-
-
 }
+
+
+
