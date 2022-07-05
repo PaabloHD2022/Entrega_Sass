@@ -174,14 +174,14 @@ footer {
     .footer__menu .redes__info {
       width: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: space-around; }
+      flex-direction: column; }
       .footer__menu .redes__info .redes__container {
         display: flex;
         flex-direction: row;
         align-items: center; }
         .footer__menu .redes__info .redes__container ul li {
           display: inline-block;
+          margin: 0.5rem;
           width: 5rem;
           height: 5rem;
           text-align: center; }
@@ -213,12 +213,14 @@ footer {
       display: flex;
       flex-direction: row;
       align-items: center; }
-      .redes__info .redes__container ul li a {
+      .redes__info .redes__container ul li {
+        margin: 0; }
+      .redes__info .redes__container > a {
         display: inline-block;
-        margin: 1rem;
         width: 3rem;
-        height: 5rem;
-        text-align: center; } }
+        height: 3rem;
+        text-align: center;
+        margin: 0; } }
 
 /*---HEADER---*/
 .header {
@@ -289,10 +291,10 @@ footer {
   #menu {
     display: block;
     color: #fff;
-    font-size: 1.8em;
+    font-size: 2.4em;
     position: absolute;
     right: 5rem;
-    top: 3rem;
+    top: 5.5rem;
     z-index: 9999; }
     #menu:hover {
       color: #f78710; }
@@ -321,6 +323,14 @@ footer {
   .header img {
     width: 200px;
     text-align: center; }
+  #menu {
+    display: block;
+    color: #fff;
+    font-size: 2.4em;
+    position: absolute;
+    right: 5rem;
+    top: 5rem;
+    z-index: 9999; }
   .nav__header {
     width: 40%;
     position: absolute;
@@ -337,6 +347,17 @@ footer {
       font-size: 1.6em; } }
 
 @media (max-width: 440px) {
+  .header img {
+    width: 180px;
+    text-align: center; }
+  #menu {
+    display: block;
+    color: #fff;
+    font-size: 2.4em;
+    position: absolute;
+    right: 5rem;
+    top: 5rem;
+    z-index: 9999; }
   .nav__header {
     width: 40%;
     position: absolute;

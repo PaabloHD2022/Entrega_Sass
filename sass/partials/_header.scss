@@ -91,10 +91,10 @@
     #menu {
         display: block;
         color: $alternative2;
-        font-size: $text-base;
+        font-size: $text-medium;
         position: absolute;
         right: $spacing-large;
-        top: $spacing-medium;
+        top: $spacing-large-2;
         z-index: 9999;
 
         &:hover{
@@ -142,6 +142,16 @@
         }   
     }
 
+    #menu {
+        display: block;
+        color: $alternative2;
+        font-size: $text-medium;
+        position: absolute;
+        right: $spacing-large;
+        top: $spacing-large;
+        z-index: 9999;
+    }
+
     .nav__header{
         width:40%;
         position: absolute;
@@ -162,6 +172,24 @@
 }
 
 @media (max-width: 440px){
+    .header{
+                
+        & img{
+        width: 180px;
+        text-align: center;
+        }   
+    }
+
+    #menu {
+        display: block;
+        color: $alternative2;
+        font-size: $text-medium;
+        position: absolute;
+        right: $spacing-large;
+        top: $spacing-large;
+        z-index: 9999;
+    }
+
     .nav__header{
         width:40%;
         position: absolute;
