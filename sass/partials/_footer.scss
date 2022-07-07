@@ -55,7 +55,7 @@ footer{
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            padding: $spacing-small;                       
+            padding: $spacing-xsmall;                       
         
             & ul li{
                 display: inline-block;
@@ -195,8 +195,8 @@ footer{
                 & ul li{
                     display: inline-block;
                     margin: 0.5rem;
-                    width: $width-base;
-                    height: $width-base;
+                    width: $width-small;
+                    height: $width-small;
                     text-align: center;
                 }            
             }
@@ -233,7 +233,7 @@ footer{
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        width: 100%;
+        width: 90%;
         
         & .redes__container{
             display: flex;
@@ -242,6 +242,9 @@ footer{
         
             & ul li{
                 margin: 0;
+                width: $width-small;
+                height: $width-small;
+                margin-right: $spacing-base;
             } 
             
             &>a{
@@ -249,7 +252,7 @@ footer{
                 width: $width-small;
                 height: $width-small;
                 text-align: center;
-                margin: 0;
+                
             }
         }
     }

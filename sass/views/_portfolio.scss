@@ -6,7 +6,7 @@
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: 'card' 'card'
                          'card' 'card';
-    gap: $spacing-base;
+    grid-gap: $spacing-base;
 }
 
 //---RESPONSIVE---
@@ -20,7 +20,7 @@
                              'card'
                              'card'
                              'card';
-        gap: $spacing-base;
+        grid-gap: $spacing-base;
     }
 
     .cards__portfolio{
