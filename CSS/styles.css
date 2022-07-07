@@ -380,10 +380,10 @@ footer {
     text-align: center;
     padding: 1.5rem; }
   .header .nav__header {
-    width: 30%;
+    width: 50%;
     position: absolute;
     top: 2rem;
-    right: 1rem;
+    right: 0.5rem;
     background-color: #063d81;
     padding-right: 1em;
     opacity: 0.8; }
