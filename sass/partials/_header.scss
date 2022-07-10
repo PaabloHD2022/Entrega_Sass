@@ -96,6 +96,7 @@
         right: $spacing-large;
         top: $spacing-large-2;
         z-index: 2;
+        transition: all 300ms ease-out;
 
         &:hover{
             color: $alternative4;
@@ -108,10 +109,12 @@
 
     #menu-check:checked ~ label #menu-abrir {
         display: none;
+        transition: all 300ms ease-out;
     }
 
     #menu-check:checked ~ label #menu-cerrar{
         display: block;
+        transition: all 300ms ease-out;
     }
         
     .nav__header{
@@ -149,7 +152,8 @@
         position: absolute;
         right: $spacing-large;
         top: $spacing-large;
-        z-index: 9999;
+        z-index: 2;
+        transition: all 300ms ease-out;
     }
 
     .nav__header{
@@ -187,7 +191,8 @@
         position: absolute;
         right: $spacing-large;
         top: $spacing-large;
-        z-index: 9999;
+        z-index: 2;
+        transition: all 300ms ease-out;
     }
 
     .nav__header{
@@ -242,7 +247,8 @@
         position: absolute;
         right: $spacing-medium;
         top: $spacing-large-2;
-        z-index: 9999;
+        z-index: 2;
+        transition: all 300ms ease-out;
 
         &:hover{
             color: $alternative4;

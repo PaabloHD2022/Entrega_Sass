@@ -297,15 +297,18 @@ footer {
     position: absolute;
     right: 5rem;
     top: 5.5rem;
-    z-index: 2; }
+    z-index: 2;
+    transition: all 300ms ease-out; }
     #menu:hover {
       color: #f78710; }
   #menu-cerrar {
     display: none; }
   #menu-check:checked ~ label #menu-abrir {
-    display: none; }
+    display: none;
+    transition: all 300ms ease-out; }
   #menu-check:checked ~ label #menu-cerrar {
-    display: block; }
+    display: block;
+    transition: all 300ms ease-out; }
   .nav__header {
     width: 40%;
     position: absolute;
@@ -332,7 +335,8 @@ footer {
     position: absolute;
     right: 5rem;
     top: 5rem;
-    z-index: 9999; }
+    z-index: 2;
+    transition: all 300ms ease-out; }
   .nav__header {
     width: 40%;
     position: absolute;
@@ -359,7 +363,8 @@ footer {
     position: absolute;
     right: 5rem;
     top: 5rem;
-    z-index: 9999; }
+    z-index: 2;
+    transition: all 300ms ease-out; }
   .nav__header {
     width: 40%;
     position: absolute;
@@ -400,7 +405,8 @@ footer {
     position: absolute;
     right: 3rem;
     top: 5.5rem;
-    z-index: 9999; }
+    z-index: 2;
+    transition: all 300ms ease-out; }
     #menu:hover {
       color: #f78710; } }
 
