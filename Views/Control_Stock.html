@@ -39,70 +39,23 @@
                 <section class="seccion">
                     <h1 class="titulo__principal">CONTROL DE STOCK</h1>
                 </section>
+                <h2>Formulario de ingreso de productos</h2>
+                <div id="alerts">
+                </div>
                 <form>
-                    <div class="row mb-3">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail3">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                        <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword3">
-                        </div>
-                    </div>
-                    <!-- <fieldset class="row mb-3">
-                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                        <div class="col-sm-10"> -->
-                            <!-- <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                                <label class="form-check-label" for="gridRadios1">
-                                    First radio
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                <label class="form-check-label" for="gridRadios2">
-                                    Second radio
-                                </label>
-                            </div>
-                            <div class="form-check disabled">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-                            <label class="form-check-label" for="gridRadios3">
-                                Third disabled radio
-                            </label>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <div class="row mb-3">
-                        <div class="col-sm-10 offset-sm-2">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck1">
-                            <label class="form-check-label" for="gridCheck1">
-                            Example checkbox
-                            </label>
-                        </div>
-                        </div>
-                    </div> -->
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <input type="number" placeholder="Codigo de Producto" id="codProd"><br><br>
+                    <input type="text" placeholder="Item" id="item"><br><br>
+                    <input type="text" placeholder="Descripción" id="descripcion"><br><br>
+                    <input type="number" placeholder="Cantidad mínima" id="cant_min"><br><br>
+                    <input type="number" placeholder="Importe" id="precio"><br><br>
+                    <label>Producto Activado</label><br><br>
+                    <input type="checkbox" placeholder="Avtivado" id="prodActiv"><br><br>
+                    <input type="file" placeholder= "Imagen Producto" id="imgProd"><br><br>
+                    <!-- <input type="text" placeholder="Imagen Producto" id="imgProd"> -->
+                    <button type="button" id="btn_crear_prod">Ingresar</button>
                 </form>
-                <!-- <section class="seccion__nosotros">
-                        <div class="informacion">
-                            <p>Somos una empresa especializada dentro del sector industrial argentino, que fue fundada en el año 1984.
-                            Basamos nuestra actividad principal en la impresión de piezas editoriales y comerciales. Desde hace menos de un año, incorporamos tecnología de última generación y de este modo sumamos a nuestro portfolio la división de comunicación.<br><br>
-                            Contamos con un edificio propio de aproximadamente 4.000 metros cuadrados, ubicado en el centro geográfico de la Ciudad de Buenos Aires, que fue concebido y está íntegramente diseñado para la actividad gráfica.<br><br>
-                            Estamos certificados bajo las Normas ISO 9001, en todos nuestros procesos,  desde hace  más de 15 años.
-                            Nuestro compromiso con la satisfacción de nuestros clientes y la calidad es constante.<br>Y desde nuestros inicios, actúa como motor y referente principal para el desarrollo y crecimiento de nuestra empresa.
-                            </p>
-                        </div>
-                    <div class="imagen__nosotros">
-                        <img src="../Img/Nosotros_1_1.jpg" alt="Imagen de nosotros">
-                    </div>
-                </section>
-                <div class="planta__pc">
-                    <img src="../Img/Foto_planta_PC.png" alt="Nuestra planta">                    
-                </div> -->
+                <div id="prodCtn">
+                </div>                
             </main>
             <footer>
                 <section class="footer__menu">
@@ -139,6 +92,8 @@
             </footer>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="../js/productos.js"></script>
         <script src="../js/main.js"></script>              
     </body>
 </html>

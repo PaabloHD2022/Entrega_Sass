@@ -1,41 +1,168 @@
 //LISTADO DE PRODUCTOS DISPONIBLES
+/* 
 
-class Productos{    
+list_productos.push(new Productos(01,'AgendasTB', 'Tapa blanda full color', '100 unidades', 10000, 'Activado')) ;
+list_productos.push(new Productos(02,'AgendasTD', 'Tapa dura ByN', '100 unidades', 7000, 'Activado')) ;
+list_productos.push(new Productos(03,'AgendasTD2', 'Tapa dura full color', '100 unidades', 13000, 'Activado')) ;
+list_productos.push(new Productos(04,'Almanaques', 'Con base full color', '1000 unidades', 15000, 'Activado')) ;
+list_productos.push(new Productos(05,'Banners', 'Lona y rollup', '1 unidad', 5000, 'Activado')) ;
+list_productos.push(new Productos(06,'Bolsas', 'Bolsas de tela con cierre', '500 unidades', 4000, 'Activado')) ;
+list_productos.push(new Productos(07,'Cajas', 'Diseño personalizado', '500 unidades', 20000, 'Activado')) ;
+list_productos.push(new Productos(08,'Cartelería', 'Colgante PVC espumado', '1 unidad', 3500, 'Activado')) ;
+list_productos.push(new Productos(09,'CatálogosAc', 'Acaballado full color', '500 unidades', 11000, 'Activado')) ;
+list_productos.push(new Productos(10,'CatálogosPre', 'Premiun lomo cuadrado full color', '500 unidades', 25000, 'Activado')) ;
+list_productos.push(new Productos(11,'CuadernosTB', 'Tapa blanda full color', '100 unidades', 10000, 'Activado')) ;
+list_productos.push(new Productos(12,'CuadernosTD', 'Tapa dura full color', '100 unidades', 23000, 'Activado')) ;
+list_productos.push(new Productos(13,'LibrosTB', 'Tapa blanda full color', '100 unidades', 40000, 'Activado')) ;
+list_productos.push(new Productos(14,'LibrosTD', 'Tapa dura full color', '100 unidades', 65000, 'Activado')) ;
+list_productos.push(new Productos(15,'RevistasCLom', 'Con lomo full color', '1000 unidades', 150000, 'Activado')) ;
+list_productos.push(new Productos(16,'RevistasAc', 'Acaballadas full color', '1000 unidades', 70000, 'Activado')) ; */
 
-    constructor (id, item, descripcion, cantidad_min, precio){
 
-        this.id = id ;
-        this.item = item;
-        this.descripcion = descripcion;
-        this.cantidad_min = cantidad_min;
-        this.precio = precio;
-    }    
+let productos = new Array();
 
-    descripcion_completa_productos(){
+let alerts = document.getElementById("alerts");
+let prodCtn = document.getElementById("prodCtn");
+let btn_crear_prod = document.getElementById("btn_crear_prod");
 
-        return this.id+" - "+this.item+" - "+this.descripcion+" - "+this.cantidad_min+" - "+" $"+ +this.precio ; 
+btn_crear_prod.addEventListener("click", ()=>{
+
+    if (validar_datos()){
+
+        crearProducto();
+
+    }   
+});
+
+function validar_datos(){
+
+    alerts.innerHTML = "";
+
+    let input_codProd = document.getElementById("codProd").value;
+    let input_item = document.getElementById("item").value;
+    let input_descripcion = document.getElementById("descripcion").value;
+    let input_cantMin = document.getElementById("cantMin").value;
+    let input_precio = document.getElementById("precio").value;
+    let input_imgProd = document.getElementById("imgProd").value;
+
+    let alerts_mensajes = new Array();
+
+    while(alerts_mensajes.length < 0){
+        
+        switch(alerts_mensajes){
+
+        case "input_codProd":
+            input_codProd < 0;
+            alerts_mensajes.push("Ingrese un codigo de producto");
+        
+        case "input_item":
+            input_item !="";
+            alerts_mensajes.push("ingrese una item");
+
+        case "input_descripcion":
+            input_descripcion !="";
+            alerts_mensajes.push("Inrese una descripcion del producto a ingresar");
+
+        case "input_cantMin":
+            input_cantMin < 0;
+            alerts_mensajes.push("Ingrese cantidad de venta minima de este producto");
+
+        case "input_precio":
+            input_precio < 0;
+            alerts_mensajes.push("Ingrese precio del producto");
+
+        case "input_imgProd":
+            input_imgProd !="";
+            alerts_mensajes.push("Ingrese la foto del producto");
+    }
+
+    let lista_errores = document.createElement("ol");
+    lista_errores.textContent = "Error en la carga de datos: ";
+
+    alerts_mensajes.forEach(mensaje =>{
+        lista_errores.appendChild(crear_li(mensaje));
+    })
+
+    alerts_mensajes.appendChild(lista_errores);
+    return false;
+    }
+
+    while(alerts_mensajes.length > 0){
+
+        return true;
     }
 }
 
-let list_productos = new Array() ;
-list_productos.push(new Productos(1,'AgendasTB', 'Tapa blanda full color', '100 unidades', 10000)) ;
-list_productos.push(new Productos(2,'AgendasTD', 'Tapa dura ByN', '100 unidades', 7000)) ;
-list_productos.push(new Productos(3,'AgendasTD2', 'Tapa dura full color', '100 unidades', 13000)) ;
-list_productos.push(new Productos(4,'Almanaques', 'Con base full color', '1000 unidades', 15000)) ;
-list_productos.push(new Productos(5,'Banners', 'Lona y rollup', '1 unidad', 5000)) ;
-list_productos.push(new Productos(6,'Bolsas', 'Bolsas de tela con cierre', '500 unidades', 4000)) ;
-list_productos.push(new Productos(7,'Cajas', 'Diseño personalizado', '500 unidades', 20000)) ;
-list_productos.push(new Productos(8,'Cartelería', 'Colgante PVC espumado', '1 unidad', 3500)) ;
-list_productos.push(new Productos(9,'CatálogosAc', 'Acaballado full color', '500 unidades', 11000)) ;
-list_productos.push(new Productos(10,'CatálogosPre', 'Premiun lomo cuadrado full color', '500 unidades', 25000)) ;
-list_productos.push(new Productos(11,'CuadernosTB', 'Tapa blanda full color', '100 unidades', 10000)) ;
-list_productos.push(new Productos(12,'CuadernosTD', 'Tapa dura full color', '100 unidades', 23000)) ;
-list_productos.push(new Productos(13,'LibrosTB', 'Tapa blanda full color', '100 unidades', 40000)) ;
-list_productos.push(new Productos(14,'LibrosTD', 'Tapa dura full color', '100 unidades', 65000)) ;
-list_productos.push(new Productos(15,'RevistasCLom', 'Con lomo full color', '1000 unidades', 150000)) ;
-list_productos.push(new Productos(16,'RevistasAc', 'Acaballadas full color', '1000 unidades', 70000)) ;
+function crear_li(mensaje){
 
-let adm_prod = prompt("Elija una opción: \n A) Ver listado de productos \n B) Actualizar precio de producto \n C) Eliminar producto \n D) Actualizar descripcion de un producto") ;
+    let li = document.createElement("li");
+    li.textContent = mensaje;
+    return li;
+}
+
+function crearProducto(){
+
+    let input_codProd = document.getElementById("codProd").value;
+    let input_item = document.getElementById("item").value;
+    let input_descripcion = document.getElementById("descripcion").value;
+    let input_cantMin = document.getElementById("cantMin").value;
+    let input_precio = document.getElementById("precio").value;
+    let input_imgProd = document.getElementById("imgProd").value;
+
+    let productos = new Productos(codProd, item, descripcion, cantMin, precio, imgProd);
+
+    productos.push(productos);
+
+    generar_producto_cargado(productos);
+
+}
+
+function generar_producto_cargado(productos){
+
+    let new_div = document.createElement("div")
+    let new_h2 = document.createElement("h2");
+    new_div.id ="div"+ productos.nombre + productos.foto; 
+    new_h2.textContent = productos.nombre;
+
+    let new_img = document.createElement("img");
+    new_img.src = productos.foto;
+
+    new_div.appendChild(new_h2);
+    new_div.appendChild(new_img);
+
+    let estado = document.createElement("h6");
+    estado.textContent = productos.estado;
+    new_div.appendChild(estado);
+
+    let contenedor = document.getElementById("prodCtn");
+
+    contenedor.appendChild(new_div);
+
+    resetear_form();
+
+}
+
+function resetear_form(){
+
+    document.getElementById("codProd").value = "";
+    document.getElementById("item").value = "";
+    document.getElementById("descripcion").value = "";
+    document.getElementById("cantMin").value = "";    
+    document.getElementById("precio").value = "";
+    document.getElementById("imgProd").value = "";
+}
+
+
+
+
+
+
+
+
+
+
+
+/* let adm_prod = prompt("Elija una opción: \n A) Ver listado de productos \n B) Actualizar precio de producto \n C) Eliminar producto \n D) Actualizar descripcion de un producto") ;
 
 while(adm_prod !="ESC"){
     switch(adm_prod){
@@ -120,4 +247,4 @@ function buscar_id_Producto(id){
     }
 
     return -1 ;
-}
+} */
