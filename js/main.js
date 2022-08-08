@@ -47,7 +47,7 @@ function validar_datos(){
 
     let alerts_mensajes = new Array();    
         
-    switch(validar_datos){
+    switch(validar_formulario){
 
         case "input_codProd":
             input_codProd < 0 || isNaN;
@@ -97,7 +97,7 @@ function validar_datos(){
 
         return true;
     }
-
+}
 
 function crear_li(mensaje){
 
@@ -108,12 +108,12 @@ function crear_li(mensaje){
 
 function crearProducto(){
 
-    let input_codProd = document.getElementById("codProd").value;
-    let input_item = document.getElementById("item").value;
-    let input_descripcion = document.getElementById("descripcion").value;
-    let input_cantMin = document.getElementById("cantMin").value;
-    let input_precio = document.getElementById("precio").value;
-    let input_imgProd = document.getElementById("imgProd").value;
+    let codProd = document.getElementById("codProd").value;
+    let item = document.getElementById("item").value;
+    let descripcion = document.getElementById("descripcion").value;
+    let cantMin = document.getElementById("cantMin").value;
+    let precio = document.getElementById("precio").value;
+    let imgProd = document.getElementById("imgProd").value;
 
     let productos = new productos(codProd, item, descripcion, cantMin, precio, imgProd);
 
@@ -253,4 +253,4 @@ function buscar_id_Producto(id){
     }
 
     return -1 ;
-} */
+}*/
