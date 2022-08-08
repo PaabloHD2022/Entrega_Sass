@@ -25,7 +25,7 @@ let alerts = document.getElementById("alerts");
 let prodCtn = document.getElementById("prodCtn");
 let btn_crear_prod = document.getElementById("btn_crear_prod");
 
-btn_crear_prod.addEventListener("click", ()=>{
+btn_crear_prod.addEventListener("click",()=>{
 
     if (validar_datos()){
 
@@ -45,53 +45,59 @@ function validar_datos(){
     let input_precio = document.getElementById("precio").value;
     let input_imgProd = document.getElementById("imgProd").value;
 
-    let alerts_mensajes = new Array();
-
-    while(alerts_mensajes.length < 0){
+    let alerts_mensajes = new Array();    
         
-        switch(alerts_mensajes){
+    switch(validar_datos){
 
         case "input_codProd":
-            input_codProd < 0;
+            input_codProd < 0 || isNaN;
             alerts_mensajes.push("Ingrese un codigo de producto");
+            break;
         
         case "input_item":
-            input_item !="";
+            input_item ="";
             alerts_mensajes.push("ingrese una item");
+            break;
 
         case "input_descripcion":
-            input_descripcion !="";
+            input_descripcion ="";
             alerts_mensajes.push("Inrese una descripcion del producto a ingresar");
+            break;
 
         case "input_cantMin":
-            input_cantMin < 0;
+            input_cantMin < 0 || isNaN;
             alerts_mensajes.push("Ingrese cantidad de venta minima de este producto");
+            break;
 
         case "input_precio":
-            input_precio < 0;
+            input_precio < 0 || isNaN;
             alerts_mensajes.push("Ingrese precio del producto");
+            break;
 
         case "input_imgProd":
-            input_imgProd !="";
+            input_imgProd ="";
             alerts_mensajes.push("Ingrese la foto del producto");
+            break;
     }
 
-    let lista_errores = document.createElement("ol");
+    if (alerts_mensajes.length > 0){
+
+    let lista_errores = document.createElement("ul");
     lista_errores.textContent = "Error en la carga de datos: ";
 
     alerts_mensajes.forEach(mensaje =>{
         lista_errores.appendChild(crear_li(mensaje));
     })
 
-    alerts_mensajes.appendChild(lista_errores);
+    alerts_mensajes.appendChild(lista_errores);{
     return false;
     }
 
-    while(alerts_mensajes.length > 0){
+    }else{
 
         return true;
     }
-}
+
 
 function crear_li(mensaje){
 
@@ -109,7 +115,7 @@ function crearProducto(){
     let input_precio = document.getElementById("precio").value;
     let input_imgProd = document.getElementById("imgProd").value;
 
-    let productos = new Productos(codProd, item, descripcion, cantMin, precio, imgProd);
+    let productos = new productos(codProd, item, descripcion, cantMin, precio, imgProd);
 
     productos.push(productos);
 
@@ -130,7 +136,7 @@ function generar_producto_cargado(productos){
     new_div.appendChild(new_h2);
     new_div.appendChild(new_img);
 
-    let estado = document.createElement("h6");
+    let estado = document.createElement("h4");
     estado.textContent = productos.estado;
     new_div.appendChild(estado);
 
