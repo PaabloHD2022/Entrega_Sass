@@ -32,7 +32,7 @@
 .nav__header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: $spacing-small;
     place-content: flex-start;
     

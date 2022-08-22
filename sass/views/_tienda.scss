@@ -1,0 +1,21 @@
+
+.principal{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col{
+    margin-bottom: $spacing-base;
+}
+
+.card{
+    
+    .btn{
+        font-size: $text-xxsmall;
+        margin-top: 20px;
+        
+    }
+}
+

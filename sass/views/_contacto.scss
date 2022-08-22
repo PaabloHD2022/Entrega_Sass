@@ -11,12 +11,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+	
     
 }
 
 .form-header h3{
     color: $titulo-h3-color;
     font-weight: bolder;
+	background: $background-color-2;
+	
 }
 
 .ayuda{
@@ -29,7 +32,7 @@
     line-height: $line-height-small;
 
     & h3{
-        font-weight: bold;
+        font-weight: bold;		
     }
 
     & p{
@@ -39,63 +42,173 @@
 
 .contenedor .form{
     width: 100%;
-    max-width: 500px;
+    width: 500px;
     background: $background-color;
     margin-top: $spacing-large;
     padding: $spacing-small;
     border-bottom-right-radius: $radius-large;
     border-bottom-left-radius: $radius-large;
+	background: $background-color-2;
 
-    & .form-header .form-title{
-        font-weight: normal;
-        color: $background-color;
-        text-align: center;
-        padding: $spacing-base;
-    }
-
-    & .form-label{
-        display: flex;
+    & .formulario__label{
+        display: block;
         color: $text-color-2;
-        font-size: $text-base;
+        font-size: $text-base-2;
         font-family: $font-secondary;
+        padding: 10px;
+	    cursor: pointer;
     }
+} 
 
-    & .form-input, .form-textarea {
-        background: $alternative2;
-        border: none;
-        outline: none;
-        width: 100%;
-        padding: $spacing-small;
-        margin-bottom: $spacing-small;
-        font-family: $font-secondary;
-        font-size: $text-xsmall;
-    }
-
-    & .form-textarea{
-        resize: vertical;
-        max-height: $spacing-xlarge;
-        min-height: $spacing-large;
-        font-family: $font-secondary;
-        font-size: $text-small;
-    }
-
-    & .btn-submit{
-        width: 100%;
-        background: $background-color;
-        font-size: $text-small;
-        border: none;
-        color: $alternative2;
-        padding: $spacing-small 0px;
-        cursor: pointer;
-        transition: all .5s;
-        border-bottom-right-radius: $radius-small;
-        border-bottom-left-radius: $radius-small;
-        
-        &:hover{
-            background: $secondary;
-        }    
-    }    
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
 }
+
+.formulario__grupo-input {
+	position: relative;
+}
+
+.formulario__input {
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+    font-size: $text-small;
+}
+
+.formulario__input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    margin-top: $spacing-small;
+}
+
+.formulario__btn {
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+.formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+#consulta{
+    height: 250px;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+
+/*  Estilos para Validacion */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .form-label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+
+
+
+
 
 .map-responsive{
     max-width: 100%;
