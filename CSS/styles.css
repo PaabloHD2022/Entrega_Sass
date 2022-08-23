@@ -1113,7 +1113,9 @@ footer {
 .formulario__input-error {
   font-size: 12px;
   margin-bottom: 0;
-  display: none; }
+  display: none;
+  color: #fff;
+  font-weight: lighter; }
 
 .formulario__input-error-activo {
   display: block; }

@@ -5,14 +5,12 @@ const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,14}$/, // 7 a 14 numeros.
-	consulta: /^[a-zA-ZÀ-ÿ\s]{1,500}$/, // Letras y espacios, pueden llevar acentos.
 }
 
 const campos = {
 	nombre: false,
 	correo: false,
 	telefono: false,
-	consulta: false
 }
 
 const validarFormulario = (e) => {
@@ -29,9 +27,6 @@ const validarFormulario = (e) => {
 			validarCampo(expresiones.telefono, e.target, 'telefono');
 		break;
 
-		case "consulta":
-			validarCampo(expresiones.consulta, e.target, 'consulta');
-		break;
 	}
 }
 
@@ -61,8 +56,7 @@ inputs.forEach((input) => {
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	const terminos = document.getElementById('terminos');
-	if(campos.nombre && campos.correo && campos.telefono && campos.consulta){
+	if(campos.nombre && campos.correo && campos.telefono){
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
@@ -104,14 +98,14 @@ formulario.addEventListener('submit', (e) => {
 // const expresiones = {
 // 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 // 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-//     telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+//    telefono: /^\d{7,14}$/ // 7 a 14 numeros.
 // }
 
 // const campos = {
 // 	nombre: false,
 // 	direccion: false,
 // 	correo: false,
-//     telefono: false,
+//  telefono: false,
 // 	mensaje: false
 // }
 
