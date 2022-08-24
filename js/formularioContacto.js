@@ -67,6 +67,14 @@ formulario.addEventListener('submit', (e) => {
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
 		}, 3000);
+
+		
+		swal.fire({
+			icon: "success",
+			title: "Mensaje enviado correctamente",
+			text: "Nos pondremos en contacto a la brevedad..."
+		});
+		
 		
 		//Quita los iconos verdes del formulario una vez enviado.
 		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
@@ -74,6 +82,12 @@ formulario.addEventListener('submit', (e) => {
 		});
 	} else {
 		
-		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');{
+
+		swal.fire({
+			icon: "warning",
+			title: "Ingrese datos en el formulario",
+		});
+	}
 	}
 });
