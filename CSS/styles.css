@@ -1156,17 +1156,18 @@ footer {
 .formulario__btn {
   height: 45px;
   line-height: 45px;
-  width: 30%;
-  background: #000;
+  width: 100%;
+  background: #0b0b0b;
   color: #fff;
-  font-weight: bold;
+  font-size: 2em;
   border: none;
-  border-radius: 3px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   cursor: pointer;
   transition: .1s ease all; }
 
 .formulario__btn:hover {
-  box-shadow: 3px 0px 30px #a3a3a3; }
+  box-shadow: 2px 0px 20px #a3a3a3; }
 
 .formulario__mensaje-exito {
   font-size: 14px;
