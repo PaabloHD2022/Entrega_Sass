@@ -58,8 +58,7 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault(); //Evita que al apretar el boton enviar la pagina suba al header.
 
 	if(campos.nombre && campos.correo && campos.telefono){
-		formulario.reset();
-
+		
 		
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 		
@@ -67,14 +66,18 @@ formulario.addEventListener('submit', (e) => {
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
 		}, 3000);
-
+		
 		
 		swal.fire({
 			icon: "success",
 			title: "Mensaje enviado correctamente",
 			text: "Nos pondremos en contacto a la brevedad..."
+			
+		}) .then(()=>{
+
+			location.href= "../Views/TiendaOnline.html"
+
 		});
-		
 		
 		//Quita los iconos verdes del formulario una vez enviado.
 		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
@@ -83,11 +86,13 @@ formulario.addEventListener('submit', (e) => {
 	} else {
 		
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');{
+			
+			swal.fire({
+				icon: "warning",
+				title: "Ingrese todos los datos en el formulario",
+			});
+		}
+	}
 
-		swal.fire({
-			icon: "warning",
-			title: "Ingrese datos en el formulario",
-		});
-	}
-	}
+	formulario.reset();
 });
