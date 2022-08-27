@@ -12,7 +12,6 @@ const campos = {
 	nombre: false,
 	correo: false,
 	telefono: false,
-	consulta: false,
 }
 
 const validarFormulario = (e) => {
@@ -28,24 +27,22 @@ const validarFormulario = (e) => {
 		case "telefono":
 			validarCampo(expresiones.telefono, e.target, 'telefono');
 		break;
-
-		case "consulta":
-			validarCampo(expresiones.consulta, e.target, 'consulta');
-		break;
 	}
 }
 
 function enviarInfo(){
 	let nombre = document.getElementById("nombre").value.trim();
 	let correo = document.getElementById("correo").value.trim();
+	//ACA EN TELEFONO SELECCIONAS MAL ID PORQUE TENIAS TELFONO ES VEZ DE TELEFONO
 	let telefono = document.getElementById("telefono").value.trim();
 	let consulta = document.getElementById("consulta").value.trim();
 	
+	//POR MAS QUE OBTUVIERAS LOS DATOS NO ESTABAS RETORNANDO NINGUN VALOR
 	return {
-		name: nombre,
+		Nombre: nombre,
 		email: correo,
-		cel: telefono,
-		messages: consulta
+		Telefno: telefono,
+		Consulta: consulta
 	}
 }
 
@@ -74,12 +71,14 @@ inputs.forEach((input) => {
 });
 
 formulario.addEventListener('submit', (e) => {
-	e.preventDefault(); //Evita que al apretar el boton 'enviar' la pagina suba al header.|
+	e.preventDefault(); //Evita que al apretar el boton 'enviar' la pagina suba al header.
 
 	if(campos.nombre && campos.correo && campos.telefono){
 
-		localStorage.setItem('enviarInfo', JSON.stringify(enviarInfo()))
-
+		
+		//CUANDO INVOCAS UNA FUNCION PARA QUE SE EJECUTE ACORDATE DE PONERLE LOS ()
+		localStorage.setItem('enviarInfo', JSON.stringify(this.enviarInfo()))
+				
 		swal.fire({
 			icon: "success",
 			title: "Mensaje enviado correctamente",
@@ -92,7 +91,7 @@ formulario.addEventListener('submit', (e) => {
 		});
 		
 		//Quita los iconos verdes del formulario una vez enviado.
-			document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
+		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
 			icono.classList.remove('formulario__grupo-correcto');
 		});
 	} else {
