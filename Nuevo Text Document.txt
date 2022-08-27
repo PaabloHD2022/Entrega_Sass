@@ -1,0 +1,4 @@
+localStorage.setItem('data', JSON.stringify(this.data))
+localStorage.setItem('variable', JSON.stringify(this.variable))
+
+

@@ -27,10 +27,18 @@ const validarFormulario = (e) => {
 		case "telefono":
 			validarCampo(expresiones.telefono, e.target, 'telefono');
 		break;
-
 	}
 }
 
+function enviarInfo(){
+	let nombre = document.getElementById("nombre").value.trim();
+	let correo = document.getElementById("correo").value.trim();
+	let telefono = document.getElementById("telfono").value.trim();
+	let consulta = document.getElementById("consulta").value.trim();
+	console.log(nombre +" "+ correo +" "+ telefono +" "+ consulta);
+}
+
+//Valida inputs. 
 const validarCampo = (expresion, input, campo) => {
 	if(expresion.test(input.value)){
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
@@ -55,19 +63,14 @@ inputs.forEach((input) => {
 });
 
 formulario.addEventListener('submit', (e) => {
-	e.preventDefault(); //Evita que al apretar el boton enviar la pagina suba al header.
+	e.preventDefault(); //Evita que al apretar el boton 'enviar' la pagina suba al header.
 
 	if(campos.nombre && campos.correo && campos.telefono){
+
 		
 		
-		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
-		
-		//Agrega y quita el mensaje de enviado despues de 3 segundos.
-		setTimeout(() => {
-			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
-		}, 3000);
-		
-		
+		localStorage.setItem('enviarInfo', JSON.stringify(this.enviarInfo))
+				
 		swal.fire({
 			icon: "success",
 			title: "Mensaje enviado correctamente",
@@ -86,7 +89,7 @@ formulario.addEventListener('submit', (e) => {
 	} else {
 		
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');{
-			
+
 			swal.fire({
 				icon: "warning",
 				title: "Ingrese todos los datos en el formulario",
