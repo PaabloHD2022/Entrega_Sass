@@ -1245,3 +1245,7 @@ footer {
 .card .btn {
   font-size: 1.2em;
   margin-top: 20px; }
+
+.btn {
+  padding: 2rem 5rem;
+  color: #fff; }
