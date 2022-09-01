@@ -83,15 +83,15 @@ formulario.addEventListener('submit', (e) => {
 		swal.fire({
 			icon: "success",
 			title: "Mensaje enviado correctamente",
-			text: "Nos pondremos en contacto a la brevedad..."
+			text: "Nos pondremos en contacto con usted a la brevedad..."
 			
 		}) .then(()=>{
-
+			// Despues de enviar el formulario nos lleva a la pagina de la tienda.
 			location.href= "../Views/TiendaOnline.html"
 
 		});
 		
-		//Quita los iconos verdes del formulario una vez enviado.
+			//Quita los iconos verdes del formulario una vez enviado.
 			document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
 			icono.classList.remove('formulario__grupo-correcto');
 		});
