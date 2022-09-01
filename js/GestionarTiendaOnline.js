@@ -15,7 +15,7 @@ class TiendaOnline {
                                                             <img src="${item.Img}" class="card-img-top">
                                                             <h3 class="card-title">${item.Nombre}</h3>
                                                             <p class="card-text">${item.Descripcion}</p>
-                                                            <h5>${"Producción mínima" + " " + item.ProduccionMinima}</h5>                       
+                                                            <h5 class="titulo2">${"Producción mínima" + " " + item.ProduccionMinima}</h5>                       
                                                             <a href="./Contacto.html" class="btn btn-dark">Consulta</a>
                                                         </div>
                                                     </div>
