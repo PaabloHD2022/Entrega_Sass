@@ -58,7 +58,7 @@ footer {
   grid-template-areas: 'footer';
   padding: 0.5rem;
   background: linear-gradient(to top, #292929, #5a5a5a);
-  box-shadow: 0px 0px 70px #d6d6d6;
+  box-shadow: 0px 0px 70px #747474;
   font-family: "Barlow", sans-serif; }
 
 .footer__menu {
@@ -236,7 +236,7 @@ footer {
   grid-template-areas: 'header';
   padding: 0.5rem;
   background: linear-gradient(to bottom, #070a0e, #17559f);
-  box-shadow: 0px 0px 70px #d6d6d6;
+  box-shadow: 0px 0px 70px #747474;
   font-family: "Barlow", sans-serif; }
 
 .menu__header {
@@ -423,7 +423,7 @@ footer {
   grid-template-areas: 'principal';
   padding: 2rem;
   background-color: #fff;
-  box-shadow: 0px 5px 70px #d6d6d6; }
+  box-shadow: 0px 5px 70px #747474; }
 
 .card {
   margin-top: 1.5rem;
@@ -449,7 +449,7 @@ footer {
   padding: 1.5rem; }
 
 .card:hover {
-  box-shadow: 5px 5px 30px #d6d6d6;
+  box-shadow: 5px 5px 30px #747474;
   transition: all 0.5s ease; }
 
 .articulos {
@@ -487,7 +487,7 @@ footer {
       width: 400px;
       overflow: hidden;
       border-radius: 0.6rem;
-      box-shadow: 0px 15px 25px #d6d6d6; }
+      box-shadow: 0px 15px 25px #747474; }
       .pilares .contenedor figure img {
         width: 100%;
         height: 100%;
@@ -588,7 +588,7 @@ footer {
         cursor: pointer;
         width: 400px;
         border-radius: 0.6rem;
-        box-shadow: 0px 15px 25px #d6d6d6; }
+        box-shadow: 0px 15px 25px #747474; }
         .pilares .contenedor figure img {
           width: 100%;
           height: 100%;
@@ -1239,13 +1239,8 @@ footer {
   flex-direction: column;
   align-items: center; }
 
-.col {
-  margin-bottom: 2rem; }
-
-.card .btn {
-  font-size: 1.2em;
-  margin-top: 20px; }
-
-.btn {
-  padding: 2rem 5rem;
-  color: #fff; }
+#container {
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-rows: 1fr, 1fr, 1fr;
+  gap: 2rem; }

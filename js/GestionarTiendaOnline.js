@@ -8,11 +8,18 @@ class TiendaOnline {
                 const fragSect = document.createDocumentFragment();
                 resultado.forEach((item) => {
                     const container = document.createElement("div");
-                    container.innerHTML = `<div>
-                                                <h5>${item.Nombre}</h5>
-                                                <p>${item.Descripcion}</p>
-                                                <p>${item.ProduccionMinima}</p>                       
-                                                <a href="./Contacto.html" class="btn btn-dark"></a>
+                    container.innerHTML = ` <div class="row row-cols-1 row-cols-md-3 g-4">
+                                                <div class="col">
+                                                    <div class="card h-100">
+                                                        <div class="card-body">
+                                                            <img src="${item.Img}" class="card-img-top">
+                                                            <h3 class="card-title">${item.Nombre}</h3>
+                                                            <p class="card-text">${item.Descripcion}</p>
+                                                            <h5>${"Producción mínima" + " " + item.ProduccionMinima}</h5>                       
+                                                            <a href="./Contacto.html" class="btn btn-dark">Consulta</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>`;
                     fragSect.appendChild(container);
                 });
@@ -29,16 +36,19 @@ class TiendaOnline {
             prod.classList.add("row", "row-cols-1", "row-cols-md-3 g-4");
             prod.setAttribute("id", "row_" + producto.id);
 
-            prod.innerHTML += `  <div>
-                                    <img src="./Img/Tienda_Online/${producto.img}" alt="">
-                                    <div>
-                                        <h5>${producto.Nombre}</h5>
-                                        <p>${producto.Descripcion}</p>
-                                        <p>${producto.PoduccionMinima}</p>                       
-                                        <a href="./Contacto.html" class="btn btn-dark"></a>
+            prod.innerHTML += ` <div class="row row-cols-1 row-cols-md-3 g-4">
+                                    <div class="col">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <img src="${item.Img}" class="card-img-top">
+                                                <h3 class="card-title">${item.Nombre}</h3>
+                                                <p class="card-text">${item.Descripcion}</p>
+                                                <h5>${"Producción mínima" + " " + item.ProduccionMinima}</h5>                       
+                                                <a href="./Contacto.html" class="btn btn-dark">Consulta</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>`;
-
             divProductos.appendChild(prod);
         });
     }

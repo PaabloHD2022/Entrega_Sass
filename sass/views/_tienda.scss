@@ -6,21 +6,10 @@
     align-items: center;
 }
 
-.col{
-    margin-bottom: $spacing-base;
-}
+#container{
+    display: grid;
+    grid-template-columns: (1fr, 1fr, 1fr);
+    grid-template-rows: (1fr, 1fr, 1fr);
+    gap: $spacing-base;
 
-.card{
-    
-    .btn{
-        font-size: $text-xxsmall;
-        margin-top: 20px;
-        
-    }
 }
-
-.btn {
-    padding: $spacing-base $spacing-large;
-    color: $text-color-2;
-}
-
