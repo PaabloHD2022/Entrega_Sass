@@ -8,16 +8,14 @@ class TiendaOnline {
                 const fragSect = document.createDocumentFragment();
                 resultado.forEach((item) => {
                     const container = document.createElement("div");
-                    container.innerHTML = ` <div class="row row-cols-1 row-cols-md-3 g-4">
-                                                <div class="col">
-                                                    <div class="card h-100">
-                                                        <img src="${item.Img}" class="card-img-top">
-                                                            <div class="card-body">                                                            
-                                                            <h3 class="card-title">${item.Nombre}</h3>
-                                                            <p class="card-text">${item.Descripcion}</p>
-                                                            <h5 class="titulo2">${"Producción mínima" + " " + item.ProduccionMinima}</h5>                       
-                                                            <a href="./Contacto.html" class="btn btn-dark">Consulta</a>
-                                                        </div>
+                    container.innerHTML = ` <div class="contenedor">
+                                                <div class="Cards">
+                                                    <img src="${item.Img}" class="imgCard">                                                
+                                                    <div class="infoCard">
+                                                        <h3 class="cardTitle">${item.Nombre}</h3>
+                                                        <p class="descripcion">${item.Descripcion}</p>
+                                                        <h5 class="cantidad">${"Producción mínima" + " " + item.ProduccionMinima}</h5>                       
+                                                        <a href="./Contacto.html" class="boton">Consulta</a>
                                                     </div>
                                                 </div>
                                             </div>`;
@@ -36,17 +34,15 @@ class TiendaOnline {
             prod.classList.add("row", "row-cols-1", "row-cols-md-3 g-4");
             prod.setAttribute("id", "row_" + producto.id);
 
-            prod.innerHTML += ` <div class="row row-cols-1 row-cols-md-3 g-4">
-                                    <div class="col">
-                                        <div class="card h-100">
-                                            <img src="${item.Img}" class="card-img-top">
-                                                <div class="card-body">                                                            
-                                                <h3 class="card-title">${item.Nombre}</h3>
-                                                <p class="card-text">${item.Descripcion}</p>
-                                                <h5 class="titulo2">${"Producción mínima" + " " + item.ProduccionMinima}</h5>                       
-                                                <a href="./Contacto.html" class="btn btn-dark">Consulta</a>
-                                            </div>
-                                        </div>
+            prod.innerHTML += ` <div class="contenedor">
+                                    <div class="Cards">
+                                        <img src="${item.Img}" class="imgCard">
+                                    </div>
+                                    <div class="infoCard">
+                                        <h3>${item.Nombre}</h3>
+                                        <p>${item.Descripcion}</p>
+                                        <h5>${"Producción mínima" + " " + item.ProduccionMinima}</h5>                       
+                                        <a href="./Contacto.html" class="boton">Consulta</a>
                                     </div>
                                 </div>`;
             divProductos.appendChild(prod);
