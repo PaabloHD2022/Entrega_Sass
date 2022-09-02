@@ -6,16 +6,21 @@
     align-items: center;
 }
 
-.card-body{
-    padding: $spacing-base;
-}
-
-.btn{
-    width: 100px;
-    font-size: $text-small;
+.row{
     
+    margin: $spacing-xxsmall;
 }
 
 .titulo2{
     text-align: center;
 }
+
+
+.card-body{
+    align-items: center;
+}
+
+.btn{
+    width: 100px;
+}
+
