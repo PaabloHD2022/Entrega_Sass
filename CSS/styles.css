@@ -1270,7 +1270,8 @@ footer {
     font-family: "Barlow", sans-serif;
     text-align: justify;
     line-height: 1.2em;
-    margin-left: 1.5rem; }
+    margin-left: 1.5rem;
+    flex-grow: 1; }
     .infoCard .descripcion > span {
       font-weight: bolder; }
   .infoCard .cardTitle {
@@ -1294,7 +1295,9 @@ footer {
     margin-top: 10px;
     font-family: "Barlow", sans-serif;
     text-align: center;
-    margin-left: 1.5rem; }
+    margin-left: 1.5rem;
+    display: block;
+    position: relative; }
     .infoCard .boton:hover {
       background-color: #063d81;
       font-weight: bold; }
