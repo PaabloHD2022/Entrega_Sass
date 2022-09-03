@@ -19,14 +19,22 @@
     display: flex;
     flex-direction: row;
 
-    & .imgCard{
-        width:250px;
-        height: 250px;
-    }
+    & .imgCont{
+        width:300px;
+        height:250px;
+        overflow:hidden;                  
+
+        &:hover .imgCard{
+            width:250px;
+            height:250px;
+            transform: scale(1.3);
+            transition: ease-in-out 0.8s;            
+        }
+    }    
 }
 
 .infoCard{
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     padding: $spacing-small;
@@ -36,11 +44,17 @@
         font-family: $font-secondary;
         text-align: justify;
         line-height: 1.2em;
+        margin-left: $spacing-small;
+
+        & >span{
+            font-weight: bolder;
+        }
     }
 
     & .cardTitle{
         color: $text-color-5;
         font-weight: bold;
+        margin-left: $spacing-small;
     }
 
     & .cantidad{
@@ -48,11 +62,12 @@
         font-family: $font-secondary;
         font-size: $text-small;
         font-weight: bold;
+        margin-left: $spacing-small;
 
     }
 
     & .boton{
-        width: 110px;
+        width: 100px;
         padding: $spacing-xxsmall $spacing-xxsmall;
         background-color: $secondary;
         text-decoration: none;
@@ -62,10 +77,12 @@
         margin-top: 10px;
         font-family: $font-secondary;
         text-align: center;
+        margin-left: $spacing-small;
 
         &:hover{
             background-color: $background-color-3;
-            color: $alternative4;
+            font-weight: bold;
+            
             
         }
     }

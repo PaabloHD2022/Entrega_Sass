@@ -1046,10 +1046,11 @@ footer {
   justify-content: space-evenly; }
 
 .contact-form {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  align-items: center; }
 
 .form-header h3 {
   color: #fff;
@@ -1058,9 +1059,9 @@ footer {
 
 .ayuda {
   font-size: 1.6em;
-  width: 100%;
+  width: 90%;
   max-width: 500px;
-  margin-top: 5rem;
+  margin-top: 7rem;
   text-align: justify;
   font-family: "Barlow", sans-serif;
   line-height: 1.2em; }
@@ -1100,7 +1101,7 @@ footer {
   border: 3px solid transparent;
   border-radius: 3px;
   height: 45px;
-  line-height: 45px;
+  line-height: 25px;
   padding: 0 40px 0 10px;
   transition: .3s ease all;
   font-size: 1.6em; }
@@ -1249,12 +1250,18 @@ footer {
 .Cards {
   display: flex;
   flex-direction: row; }
-  .Cards .imgCard {
-    width: 250px;
-    height: 250px; }
+  .Cards .imgCont {
+    width: 300px;
+    height: 250px;
+    overflow: hidden; }
+    .Cards .imgCont:hover .imgCard {
+      width: 250px;
+      height: 250px;
+      transform: scale(1.3);
+      transition: ease-in-out 0.8s; }
 
 .infoCard {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   padding: 1.5rem; }
@@ -1262,17 +1269,22 @@ footer {
     font-size: 1.6em;
     font-family: "Barlow", sans-serif;
     text-align: justify;
-    line-height: 1.2em; }
+    line-height: 1.2em;
+    margin-left: 1.5rem; }
+    .infoCard .descripcion > span {
+      font-weight: bolder; }
   .infoCard .cardTitle {
     color: #151461;
-    font-weight: bold; }
+    font-weight: bold;
+    margin-left: 1.5rem; }
   .infoCard .cantidad {
     color: #ff0000;
     font-family: "Barlow", sans-serif;
     font-size: 1.6em;
-    font-weight: bold; }
+    font-weight: bold;
+    margin-left: 1.5rem; }
   .infoCard .boton {
-    width: 110px;
+    width: 100px;
     padding: 0.5rem 0.5rem;
     background-color: #303030;
     text-decoration: none;
@@ -1281,7 +1293,8 @@ footer {
     border-radius: 10px;
     margin-top: 10px;
     font-family: "Barlow", sans-serif;
-    text-align: center; }
+    text-align: center;
+    margin-left: 1.5rem; }
     .infoCard .boton:hover {
       background-color: #063d81;
-      color: #f78710; }
+      font-weight: bold; }
