@@ -79,18 +79,13 @@ formulario.addEventListener('submit', (e) => {
 	if(campos.nombre && campos.correo && campos.telefono){
 
 		localStorage.setItem('enviarInfo', JSON.stringify(enviarInfo()))
-
 		swal.fire({
 			icon: "success",
 			title: "Mensaje enviado correctamente",
-			text: "Nos pondremos en contacto con usted a la brevedad..."
+			text: "Nos pondremos en contacto con usted a la brevedad...",			
 			
-		}) .then(()=>{
-			// Despues de enviar el formulario nos lleva a la pagina de la tienda.
-			location.href= "../Views/TiendaOnline.html"
-
 		});
-		
+				
 			//Quita los iconos verdes del formulario una vez enviado.
 			document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
 			icono.classList.remove('formulario__grupo-correcto');
@@ -105,6 +100,49 @@ formulario.addEventListener('submit', (e) => {
 			});
 		}
 	}
-
-	formulario.reset();
 });
+	const btn = document.getElementById('formulario__btn');
+
+	document.getElementById('formulario')
+    .addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    btn.value = 'enviando...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_322vtrc';
+
+    emailjs.sendForm(serviceID, templateID, this).then(() => {
+        btn.value = 'enviar correo';
+		
+			//aca inicia el mensaje de "mensaje enviado correctamente"
+			if(campos.nombre && campos.correo && campos.telefono){ // se valida la informacion y envia el modal con el mensaje
+
+			localStorage.setItem('enviarInfo', JSON.stringify(enviarInfo()))
+				swal.fire({
+					icon: "success",
+					title: "Mensaje enviado correctamente",
+					text: "Nos pondremos en contacto con usted a la brevedad...",
+				});
+			
+				//Quita los iconos verdes del formulario una vez enviado.
+				document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
+				icono.classList.remove('formulario__grupo-correcto');
+				});
+			}//luego de enviar el correo y enviar el mensaje con exito me lleva a la tienda
+
+			location.href= "../Views/TiendaOnline.html";//aca ejecuta el codigo que hace aparecer el mensaje enviado
+			//en caso de que sea error  el codigo a continuacion enviara el mensaje de error   
+	
+		}, (err) => { 
+			btn.value = 'enviar mensaje';
+			document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');{
+
+			swal.fire({
+				icon: "warning",
+				title: "Ingrese todos los datos en el formulario",
+			});
+		}
+    });
+});
+

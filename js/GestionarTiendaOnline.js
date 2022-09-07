@@ -23,6 +23,7 @@ class TiendaOnline {
                                             </div>`;
                     fragSect.appendChild(container);
                 });
+                
                 html.appendChild(fragSect);
             });
     }
@@ -32,11 +33,11 @@ class TiendaOnline {
         divProductos.innerHTML = "";
 
         productos.forEach((producto) => {
-            let prod = document.createElement("div");
-            prod.classList.add("row", "row-cols-1", "row-cols-md-3 g-4");
-            prod.setAttribute("id", "row_" + producto.id);
+            let product = document.createElement("div");
+            product.classList.add("row", "row-cols-1", "row-cols-md-3 g-4");
+            product.setAttribute("id", "row_" + producto.id);
 
-            prod.innerHTML += ` <div class="contenedor">
+            product.innerHTML += ` <div class="contenedor">
                                     <div class="Cards">
                                         <div class="imgCont">
                                             <img src="${item.Img}" class="imgCard">
@@ -49,7 +50,7 @@ class TiendaOnline {
                                         </div>
                                     </div>
                                 </div>`;
-            divProductos.appendChild(prod);
+            divProductos.appendChild(product);
         });
     }
 }
