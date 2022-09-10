@@ -38,7 +38,7 @@ class TiendaOnline {
                                                         <img src="${item.Img}" class="imgCard">
                                                     </div>                                               
                                                     <div class="infoCard">
-                                                        <h2 class="promocion">Producto en Promoción</h2>
+                                                        <h2 class="promocion">PRODUCTO EN PROMOCION...</h2>
                                                         <h3 class="cardTitle">${item.Nombre}</h3>
                                                         <p class="descripcion">${item.Descripcion}</p>
                                                         <h5 class="cantidad">${"Producción mínima" + " " + item.ProduccionMinima}</h5>                       

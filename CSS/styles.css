@@ -1303,5 +1303,7 @@ footer {
       font-weight: bold; }
 
 .promocion {
-  color: #ff0000;
-  font-weight: bold; }
+  color: #fff;
+  background-color: red;
+  padding: 0.5rem;
+  margin-left: 1.5rem; }
