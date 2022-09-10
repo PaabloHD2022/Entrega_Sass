@@ -1301,3 +1301,7 @@ footer {
     .infoCard .boton:hover {
       background-color: #063d81;
       font-weight: bold; }
+
+.promocion {
+  color: #ff0000;
+  font-weight: bold; }
