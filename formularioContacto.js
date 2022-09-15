@@ -33,11 +33,10 @@ const validarFormulario = (e) => {
 function enviarInfo(){
 	let nombre = document.getElementById("nombre").value.trim();
 	let correo = document.getElementById("correo").value.trim();
-	//ACA EN TELEFONO SELECCIONAS MAL ID PORQUE TENIAS TELFONO ES VEZ DE TELEFONO
 	let telefono = document.getElementById("telefono").value.trim();
 	let consulta = document.getElementById("consulta").value.trim();
 	
-	//POR MAS QUE OBTUVIERAS LOS DATOS NO ESTABAS RETORNANDO NINGUN VALOR
+	
 	return {
 		Nombre: nombre,
 		email: correo,
